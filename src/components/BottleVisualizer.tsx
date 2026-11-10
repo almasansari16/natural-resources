@@ -78,9 +78,9 @@ export function BottleVisualizer({ selectedType }: BottleVisualizerProps) {
               </linearGradient>
 
               <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#e2e8f0" />
-                <stop offset="50%" stopColor="#94a3b8" />
-                <stop offset="100%" stopColor="#475569" />
+                <stop offset="0%" stopColor="#1e293b" />
+                <stop offset="50%" stopColor="#090d12" />
+                <stop offset="100%" stopColor="#020617" />
               </linearGradient>
 
               <linearGradient id="glowGleam" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -128,14 +128,28 @@ export function BottleVisualizer({ selectedType }: BottleVisualizerProps) {
                 <animate attributeName="opacity" values="0;0.7;0" dur="4.2s" repeatCount="indefinite" begin="2s" />
               </circle>
 
-              {/* Minimal Luxury Bottle Label */}
-              <rect x="75" y="270" width="90" height="110" rx="4" fill="#041221" opacity="0.85" stroke="#38bdf8" strokeWidth="1" />
-              <text x="120" y="295" textAnchor="middle" fill="#00f0ff" fontSize="9" fontWeight="bold" letterSpacing="2">NATURAL</text>
-              <text x="120" y="307" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="bold" letterSpacing="2">RESOURCES</text>
-              <line x1="88" y1="316" x2="152" y2="316" stroke="#00f0ff" strokeWidth="0.8" opacity="0.7" />
-              <text x="120" y="330" textAnchor="middle" fill="#93c5fd" fontSize="7" letterSpacing="1">GLACIER RESERVE</text>
-              <text x="120" y="344" textAnchor="middle" fill="#e0f2fe" fontSize="6.5">pH 8.4 • TDS 118</text>
-              <text x="120" y="362" textAnchor="middle" fill="#38bdf8" fontSize="6" fontWeight="bold" letterSpacing="1.5">750 ML • ARTISAN</text>
+              {/* Natural Resources Signature Label from Official Bottle */}
+              {/* Sky Blue Wrap Band */}
+              <rect x="58" y="250" width="124" height="150" fill="#60a5fa" opacity="0.35" />
+              
+              {/* Iconic Center Black Label Box */}
+              <rect x="74" y="260" width="92" height="130" rx="3" fill="#090d12" stroke="#38bdf8" strokeWidth="1" />
+              
+              {/* Natural Resources Brand Typography Matching Bottle */}
+              <text x="120" y="295" textAnchor="middle" fill="#ffffff" fontSize="16" fontWeight="900" fontFamily="sans-serif" letterSpacing="2.5">NATURAL</text>
+              <text x="120" y="318" textAnchor="middle" fill="#ffffff" fontSize="11" fontWeight="800" fontFamily="sans-serif" letterSpacing="3">RESOURCES</text>
+              
+              {/* Divider Line */}
+              <line x1="84" y1="328" x2="156" y2="328" stroke="#38bdf8" strokeWidth="0.8" opacity="0.8" />
+              
+              {/* Subtitle */}
+              <text x="120" y="342" textAnchor="middle" fill="#93c5fd" fontSize="5.5" fontWeight="bold" letterSpacing="1">THE SOURCE OF</text>
+              <text x="120" y="352" textAnchor="middle" fill="#e0f2fe" fontSize="6.5" fontWeight="extrabold" letterSpacing="1">MINERAL WATER</text>
+              <text x="120" y="368" textAnchor="middle" fill="#38bdf8" fontSize="6.5" fontWeight="black" letterSpacing="1.5">L.S.L</text>
+
+              {/* Laser Dot-Matrix Batch Code near base */}
+              <text x="120" y="445" textAnchor="middle" fill="#94a3b8" fontSize="4.5" fontFamily="monospace" opacity="0.8">B#: 15-06 2026 • 06-10:91 M1</text>
+              <text x="120" y="454" textAnchor="middle" fill="#64748b" fontSize="4" fontFamily="monospace" opacity="0.7">EXP: 15-06 2028 • L.S.L PURE</text>
             </g>
 
             {/* Glass Outer Shell & Specular Highlights */}

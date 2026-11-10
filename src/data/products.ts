@@ -16,11 +16,39 @@ export interface Product {
   description: string;
   features: string[];
   imageType: "bottle-glass" | "carboy-5gal" | "bottle-active" | "bottle-sparkling" | "dispenser" | "stand" | "tanker" | "flask";
+  imageSrc?: string;
   inStock: boolean;
   sustainableReturnable: boolean;
 }
 
 export const PRODUCTS: Product[] = [
+  {
+    id: "nr-signature-bottle",
+    name: "Natural Resources™ Signature Mineral Bottle",
+    tagline: "Refresh Your Moment • Pure Hydration Pure Elegance",
+    category: "glass",
+    categoryLabel: "Signature Reserve",
+    price: 24,
+    originalPrice: 28,
+    unit: "Pack of 12 (500ml / 1.5L)",
+    volume: "6.0 Liters total",
+    ph: "8.2 Living Mineral",
+    tds: "118 mg/L",
+    badge: "Official Signature",
+    rating: 4.99,
+    reviewsCount: 890,
+    description: "The official Natural Resources™ mineral water bottle as seen in our brand collection. The Source of Mineral Water (L.S.L Certified). Bottled under sterile micro-filtration with natural mountain minerals for pure hydration and elegance.",
+    features: [
+      "The Source of Mineral Water — L.S.L laboratory verified",
+      "Optimal balance of ionic calcium, magnesium & bicarbonate",
+      "Ergonomic crystal clarity bottle with airtight black security cap",
+      "Laser dot-matrix batch authenticated for maximum freshness"
+    ],
+    imageType: "bottle-glass",
+    imageSrc: "/images/natural-resources-bottle.jpg",
+    inStock: true,
+    sustainableReturnable: true,
+  },
   {
     id: "nr-glacier-glass-750",
     name: "Glacier Reserve Glass Edition",

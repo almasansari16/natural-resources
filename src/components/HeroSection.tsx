@@ -11,6 +11,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSectionProps) {
   const [activeProduct, setActiveProduct] = useState<"glass" | "carboy" | "active" | "bulk">("glass");
+  const [viewMode, setViewMode] = useState<"photo" | "3d">("photo");
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Interactive Fluid Water Ripple Canvas Background
@@ -159,41 +160,48 @@ export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSection
           {/* Left Column: Hero Copy & Actions */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             {/* Super Header Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-cyan-300 text-xs font-semibold mb-6 shadow-[0_0_15px_rgba(0,240,255,0.2)] animate-pulse-glow">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-cyan-300 text-xs font-semibold mb-4 shadow-[0_0_15px_rgba(0,240,255,0.2)] animate-pulse-glow">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-              <span>THE GOLD STANDARD OF LIVING WATER</span>
+              <span>THE SOURCE OF MINERAL WATER • L.S.L</span>
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-              <span className="text-slate-300">pH 8.4 Remineralized</span>
+              <span className="text-emerald-300 font-bold">Pure Hydration Pure Elegance</span>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.08] text-white mb-6">
-              Pure Living Hydration. <br />
-              <span className="shimmer-text">Delivered Fresh</span> <br />
-              <span className="shimmer-text-cyan">To Your Doorstep.</span>
+            {/* Main Title Matching Brand Poster */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black tracking-tight leading-[1.05] text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-teal-300 drop-shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+                REFRESH
+              </span> <br />
+              <span className="text-white">YOUR MOMENT.</span>
             </h1>
 
             {/* Subtitle Description */}
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed mb-8">
-              Natural Resources™ delivers untouched glacial spring purity in artisanal Italian glass, smart residential 5-gallon carboys, and industrial food-grade tanker fleets. Zero microplastics, perfectly remineralized for cellular vitality.
+              <strong className="text-cyan-300 font-bold">NATURAL RESOURCES™</strong> delivers artisanal purity bottled directly at protected mineral aquifers. From individual elegant table bottles to 5-gallon doorstep refills and commercial fleet supply.
             </p>
 
             {/* Flagship Product Segment Switcher */}
             <div className="w-full max-w-xl p-1.5 rounded-2xl glass-panel mb-8 flex flex-wrap sm:flex-nowrap gap-1.5">
               <button
-                onClick={() => setActiveProduct("glass")}
+                onClick={() => {
+                  setActiveProduct("glass");
+                  setViewMode("photo");
+                }}
                 className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
-                  activeProduct === "glass"
+                  activeProduct === "glass" && viewMode === "photo"
                     ? "bg-gradient-to-r from-cyan-500 to-sky-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.4)]"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
                 <Droplets className="w-3.5 h-3.5" />
-                <span>Artisan Glass</span>
+                <span>Signature Bottle</span>
               </button>
 
               <button
-                onClick={() => setActiveProduct("carboy")}
+                onClick={() => {
+                  setActiveProduct("carboy");
+                  setViewMode("3d");
+                }}
                 className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                   activeProduct === "carboy"
                     ? "bg-gradient-to-r from-cyan-500 to-sky-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.4)]"
@@ -205,7 +213,10 @@ export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSection
               </button>
 
               <button
-                onClick={() => setActiveProduct("active")}
+                onClick={() => {
+                  setActiveProduct("active");
+                  setViewMode("3d");
+                }}
                 className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                   activeProduct === "active"
                     ? "bg-gradient-to-r from-teal-500 to-cyan-600 text-white shadow-[0_0_15px_rgba(45,212,191,0.4)]"
@@ -217,7 +228,10 @@ export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSection
               </button>
 
               <button
-                onClick={() => setActiveProduct("bulk")}
+                onClick={() => {
+                  setActiveProduct("bulk");
+                  setViewMode("3d");
+                }}
                 className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 ${
                   activeProduct === "bulk"
                     ? "bg-gradient-to-r from-cyan-500 to-sky-600 text-white shadow-[0_0_15px_rgba(0,240,255,0.4)]"
@@ -255,8 +269,8 @@ export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSection
                 <div className="text-xs text-slate-400 font-medium">Plastic Bottles Saved</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-white">8-Stage</div>
-                <div className="text-xs text-slate-400 font-medium">Nano Purity Tech</div>
+                <div className="text-xl sm:text-2xl font-black text-white">L.S.L</div>
+                <div className="text-xs text-slate-400 font-medium">Lab Verified Source</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-black text-emerald-400">45 Mins</div>
@@ -265,15 +279,69 @@ export function HeroSection({ onOpenOrderModal, onExploreProducts }: HeroSection
             </div>
           </div>
 
-          {/* Right Column: 3D Interactive Bottle Canvas Visualizer */}
+          {/* Right Column: Interactive Bottle Showcase (Real Photo or 3D) */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-            <BottleVisualizer selectedType={activeProduct} />
+            {/* View Mode Switcher Pill */}
+            <div className="flex items-center gap-1.5 p-1 rounded-full glass-panel mb-3 text-[11px] font-bold z-20">
+              <button
+                onClick={() => setViewMode("photo")}
+                className={`px-3 py-1 rounded-full transition-all ${
+                  viewMode === "photo"
+                    ? "bg-cyan-500 text-slate-950 shadow-md"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                Official Photography
+              </button>
+              <button
+                onClick={() => setViewMode("3d")}
+                className={`px-3 py-1 rounded-full transition-all ${
+                  viewMode === "3d"
+                    ? "bg-cyan-500 text-slate-950 shadow-md"
+                    : "text-slate-400 hover:text-white"
+                }`}
+              >
+                3D Interactive Model
+              </button>
+            </div>
+
+            {viewMode === "photo" ? (
+              <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-3xl overflow-hidden glass-panel p-3 border-cyan-500/40 shadow-[0_20px_50px_rgba(0,240,255,0.25)] group">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center">
+                  <img
+                    src="/images/natural-resources-bottle.jpg"
+                    alt="Natural Resources Mineral Water Bottle"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Atmospheric Vignette & Frost Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020b14]/90 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Floating Live Badge */}
+                  <div className="absolute top-4 left-4 glass-pill px-3 py-1.5 rounded-full text-xs font-bold text-white shadow-lg flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                    <span>Pure Elegance</span>
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl flex items-center justify-between">
+                    <div>
+                      <div className="text-xs font-black text-white">NATURAL RESOURCES™</div>
+                      <div className="text-[10px] text-cyan-300 font-mono">The Source of Mineral Water • L.S.L</div>
+                    </div>
+                    <span className="px-2.5 py-1 rounded-lg bg-cyan-500 text-slate-950 font-black text-xs">
+                      pH 8.2
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <BottleVisualizer selectedType={activeProduct} />
+            )}
 
             {/* Product Quick Specs Footer Pill */}
             <div className="glass-panel px-5 py-3 rounded-2xl flex items-center justify-between gap-6 w-full max-w-sm mt-4 text-xs">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-cyan-400" />
-                <span className="text-slate-300 font-medium">NSF-61 Certified</span>
+                <span className="text-slate-300 font-medium">L.S.L Lab Certified</span>
               </div>
               <div className="w-px h-4 bg-slate-700" />
               <div className="flex items-center gap-2">

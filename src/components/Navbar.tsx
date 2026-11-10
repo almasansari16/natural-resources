@@ -47,11 +47,11 @@ export function Navbar({ cartCount, onOpenCart, onOpenOrderModal }: NavbarProps)
             </div>
 
             <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-black tracking-[0.2em] text-white flex items-center gap-1.5">
-                NATURAL <span className="text-cyan-400 font-extrabold">RESOURCES</span>
+              <span className="text-base sm:text-lg font-black tracking-[0.18em] text-white flex items-center gap-1.5">
+                NATURAL <span className="text-emerald-400 font-black">RESOURCES</span>
               </span>
-              <span className="text-[10px] uppercase tracking-[0.25em] text-cyan-300/70 font-semibold -mt-0.5">
-                Pure Living Hydration • Est. 2018
+              <span className="text-[9.5px] uppercase tracking-[0.2em] text-cyan-300 font-bold -mt-0.5">
+                The Source of Mineral Water • L.S.L
               </span>
             </div>
           </a>

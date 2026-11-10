@@ -103,8 +103,19 @@ export function ProductCatalog({ onAddToCart, onOpenProductModal }: ProductCatal
             <div className="relative w-full aspect-square rounded-2xl bg-gradient-to-b from-[#061e38]/80 to-[#020b14]/90 flex items-center justify-center p-6 mb-4 overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
               <div className="absolute inset-0 bg-radial-gradient from-cyan-500/10 to-transparent opacity-50 group-hover:opacity-80 transition-opacity" />
 
-              {/* Product Artwork Glyph */}
-              {product.imageType === "bottle-glass" && (
+              {/* Product Artwork: Real Image or High-end Glyph */}
+              {product.imageSrc ? (
+                <div className="relative w-full h-full flex items-center justify-center p-2">
+                  <img
+                    src={product.imageSrc}
+                    alt={product.name}
+                    className="max-h-full max-w-full object-contain rounded-xl drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)] group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-400/40 text-[9px] font-bold text-emerald-300">
+                    Official Brand
+                  </div>
+                </div>
+              ) : product.imageType === "bottle-glass" ? (
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-36 rounded-t-xl rounded-b-md border-2 border-cyan-300/40 bg-gradient-to-b from-cyan-300/20 to-sky-600/40 relative shadow-[0_0_20px_rgba(0,240,255,0.3)]">
                     <div className="absolute top-2 left-1 right-1 h-3 rounded-full bg-white/40" />
@@ -113,7 +124,7 @@ export function ProductCatalog({ onAddToCart, onOpenProductModal }: ProductCatal
                     </div>
                   </div>
                 </div>
-              )}
+              ) : null}
 
               {product.imageType === "carboy-5gal" && (
                 <div className="flex flex-col items-center">

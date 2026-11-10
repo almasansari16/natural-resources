@@ -45,15 +45,25 @@ export function ProductDetailModal({ product, onClose, onAddToCart }: ProductDet
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
           {/* Visual Left Preview */}
           <div className="sm:col-span-5 flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-[#061e38] to-[#020b14] border border-cyan-500/20">
-            <div className="w-20 h-44 rounded-2xl border-2 border-cyan-400/50 bg-gradient-to-b from-sky-400/20 to-blue-900/40 flex flex-col items-center justify-between p-3 relative shadow-[0_0_25px_rgba(0,240,255,0.3)]">
-              <div className="w-8 h-4 rounded-t bg-slate-400" />
-              <div className="text-[9px] font-black text-cyan-300 text-center tracking-widest">
-                NATURAL RESOURCES
+            {product.imageSrc ? (
+              <div className="relative w-full aspect-[3/4] flex items-center justify-center">
+                <img
+                  src={product.imageSrc}
+                  alt={product.name}
+                  className="max-h-full max-w-full object-contain rounded-xl drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]"
+                />
               </div>
-              <div className="w-12 h-6 rounded bg-slate-900/80 border border-cyan-400/30 flex items-center justify-center text-[8px] text-white font-mono">
-                {product.volume.split(" ")[0]}
+            ) : (
+              <div className="w-20 h-44 rounded-2xl border-2 border-cyan-400/50 bg-gradient-to-b from-sky-400/20 to-blue-900/40 flex flex-col items-center justify-between p-3 relative shadow-[0_0_25px_rgba(0,240,255,0.3)]">
+                <div className="w-8 h-4 rounded-t bg-slate-400" />
+                <div className="text-[9px] font-black text-cyan-300 text-center tracking-widest">
+                  NATURAL RESOURCES
+                </div>
+                <div className="w-12 h-6 rounded bg-slate-900/80 border border-cyan-400/30 flex items-center justify-center text-[8px] text-white font-mono">
+                  {product.volume.split(" ")[0]}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="mt-4 flex gap-2 text-[10px] font-mono">
               <span className="px-2 py-0.5 rounded bg-cyan-950 border border-cyan-500/30 text-cyan-300">
