@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --brand-dark: #020b14;
-    --brand-navy: #06182c;
-    --brand-deep: #0a2540;
-    --brand-cyan: #00f0ff;
-    --brand-teal: #00d2b4;
-    --brand-blue: #0284c7;
-    --brand-foam: #e0f2fe;
-  }
+:root {
+  --brand-green: #1b4332;
+  --brand-forest: #2d6a4f;
+  --brand-blue: #0284c7;
+  --brand-sky: #38bdf8;
+  --brand-bg: #f8fafc;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Custom Scrollbar */
@@ -17,127 +19,54 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #020b14;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f3458;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00f0ff;
+  background: #0284c7;
 }
 
-/* Glassmorphism utility classes */
-.glass-panel {
-  background: rgba(8, 28, 48, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+/* Crisp Clean Glass & Shadow utilities */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease-in-out;
 }
-
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.glass-panel-hover:hover {
-  border-color: rgba(0, 240, 255, 0.4);
-  box-shadow: 0 12px 40px -10px rgba(0, 240, 255, 0.2);
+.clean-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 12px 30px -4px rgba(2, 132, 199, 0.12);
   transform: translateY(-2px);
 }
 
-.glass-pill {
-  background: rgba(14, 45, 75, 0.45);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 240, 255, 0.2);
+.brand-badge {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
 }
 
-/* Glowing text and borders */
-.glow-cyan {
-  text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+.sky-badge {
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
 }
 
-.glow-box-cyan {
-  box-shadow: 0 0 30px -5px rgba(0, 240, 255, 0.25);
-}
-
-/* Water Shimmer Gradient */
-.shimmer-text {
-  background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 45%, #38bdf8 70%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.shimmer-text-cyan {
-  background: linear-gradient(135deg, #38bdf8 0%, #00f0ff 50%, #2dd4bf 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Floating animation */
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(1deg);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes waveMotion {
+/* WhatsApp Floating Button Pulsing */
+@keyframes pulseGreen {
   0% {
-    transform: translateX(0) translateZ(0) scaleY(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
   }
-  50% {
-    transform: translateX(-25%) translateZ(0) scaleY(0.9);
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
   }
   100% {
-    transform: translateX(-50%) translateZ(0) scaleY(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
-.animate-float {
-  animation: floatSlow 6s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 4s ease-in-out infinite;
-}
-
-.animate-wave {
-  animation: waveMotion 15s linear infinite;
-}
-
-/* Water bubble rise */
-@keyframes bubbleRise {
-  0% {
-    transform: translateY(100%) scale(0.6);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-120%) scale(1.1);
-    opacity: 0;
-  }
-}
-
-.bubble {
-  position: absolute;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 240, 255, 0.2) 60%, rgba(0, 162, 255, 0.05) 100%);
-  border-radius: 50%;
-  pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: inset -2px -2px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 240, 255, 0.3);
+.animate-whatsapp {
+  animation: pulseGreen 2s infinite;
 }

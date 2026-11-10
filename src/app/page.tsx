@@ -1,174 +1,66 @@
 "use client";
 
 import React, { useState } from "react";
-import { WaterCursor } from "@/components/WaterCursor";
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { HydrationCalculator } from "@/components/HydrationCalculator";
-import { ProductCatalog } from "@/components/ProductCatalog";
-import { PurityProcess } from "@/components/PurityProcess";
-import { WaterLabTester } from "@/components/WaterLabTester";
-import { PourExperience } from "@/components/PourExperience";
-import { BatchVerifier } from "@/components/BatchVerifier";
-import { GastronomyPairing } from "@/components/GastronomyPairing";
-import { DeliveryDispatchSimulator } from "@/components/DeliveryDispatchSimulator";
-import { CorporateSolutions } from "@/components/CorporateSolutions";
-import { SustainabilityTracker } from "@/components/SustainabilityTracker";
-import { ReviewsSection } from "@/components/ReviewsSection";
-import { Footer } from "@/components/Footer";
-import { CartDrawer, CartItem } from "@/components/CartDrawer";
-import { OrderModal } from "@/components/OrderModal";
-import { ProductDetailModal } from "@/components/ProductDetailModal";
-import { Product, PRODUCTS } from "@/data/products";
+import { SimpleNavbar } from "@/components/SimpleNavbar";
+import { SimpleHero } from "@/components/SimpleHero";
+import { SimpleProducts } from "@/components/SimpleProducts";
+import { SimpleDoorstepSupply } from "@/components/SimpleDoorstepSupply";
+import { SimpleWhyUs } from "@/components/SimpleWhyUs";
+import { SimpleFactoryShowcase } from "@/components/SimpleFactoryShowcase";
+import { SimpleOrderForm } from "@/components/SimpleOrderForm";
+import { SimpleFooter } from "@/components/SimpleFooter";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { SimpleOrderModal } from "@/components/SimpleOrderModal";
+import { Product } from "@/data/products";
 
 export default function Home() {
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      product: PRODUCTS[1], // 5-Gallon Eco-Carboy
-      quantity: 2,
-    },
-  ]);
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
-  const [selectedProductDetail, setSelectedProductDetail] = useState<Product | null>(null);
-  const [orderModalPreselection, setOrderModalPreselection] = useState<string>("2x 5-Gallon Eco-Carboys (19L)");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-  // Cart operations
-  const handleAddToCart = (product: Product, quantity = 1) => {
-    setCartItems((prev) => {
-      const existing = prev.find((i) => i.product.id === product.id);
-      if (existing) {
-        return prev.map((i) =>
-          i.product.id === product.id ? { ...i, quantity: i.quantity + quantity } : i
-        );
-      } else {
-        return [...prev, { product, quantity }];
-      }
-    });
-  };
-
-  const handleUpdateQuantity = (productId: string, quantity: number) => {
-    if (quantity <= 0) {
-      handleRemoveItem(productId);
-    } else {
-      setCartItems((prev) =>
-        prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i))
-      );
-    }
-  };
-
-  const handleRemoveItem = (productId: string) => {
-    setCartItems((prev) => prev.filter((i) => i.product.id !== productId));
-  };
-
-  const handleAddCustomPlan = (plan: {
-    title: string;
-    monthlyLiters: number;
-    recommendedJugs: number;
-    recommendedCases: number;
-    monthlyPrice: number;
-  }) => {
-    // Add recommended items to cart
-    handleAddToCart(PRODUCTS[1], plan.recommendedJugs);
-    handleAddToCart(PRODUCTS[0], plan.recommendedCases);
-    setIsCartOpen(true);
-  };
-
-  const handleOpenOrder = (productTitle?: string) => {
-    if (productTitle) {
-      setOrderModalPreselection(productTitle);
-    }
+  const handleSelectProduct = (prod: Product) => {
+    setSelectedProduct(prod);
     setIsOrderModalOpen(true);
   };
 
-  const handleCheckoutFromCart = () => {
-    setIsCartOpen(false);
+  const handleOpenGeneralOrder = () => {
+    setSelectedProduct(null);
     setIsOrderModalOpen(true);
   };
-
-  const totalCartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <main className="relative min-h-screen bg-[#020b14] text-slate-100 overflow-x-hidden">
-      {/* Interactive Water Droplet Cursor */}
-      <WaterCursor />
+    <main className="min-h-screen bg-slate-50 text-slate-800 selection:bg-[#0284c7] selection:text-white">
+      {/* Navbar with Pakistani Helpline & WhatsApp */}
+      <SimpleNavbar onOpenOrderModal={handleOpenGeneralOrder} />
 
-      {/* Floating Navigation Bar */}
-      <Navbar
-        cartCount={totalCartCount}
-        onOpenCart={() => setIsCartOpen(true)}
-        onOpenOrderModal={() => handleOpenOrder()}
-      />
+      {/* Hero Section with Official Poster Taglines & Real Photos Slider */}
+      <SimpleHero onOpenOrderModal={handleOpenGeneralOrder} />
 
-      {/* Hero Showcase with Interactive Ripple Canvas & 3D Bottle */}
-      <HeroSection
-        onOpenOrderModal={() => handleOpenOrder()}
-        onExploreProducts={() => {
-          document.getElementById("collections")?.scrollIntoView({ behavior: "smooth" });
-        }}
-      />
+      {/* Product Sizes & Retail Prices in PKR */}
+      <SimpleProducts onSelectProductForOrder={handleSelectProduct} />
 
-      {/* Interactive Water Demand & Delivery Calculator */}
-      <HydrationCalculator onAddCustomPlan={handleAddCustomPlan} />
+      {/* 19-Liter Dispenser Can Doorstep Delivery for Homes & Offices */}
+      <SimpleDoorstepSupply onOpenOrderModal={handleOpenGeneralOrder} />
 
-      {/* Flagship Product Catalog with Filterable Categories */}
-      <ProductCatalog
-        onAddToCart={(prod) => handleAddToCart(prod, 1)}
-        onOpenProductModal={(prod) => setSelectedProductDetail(prod)}
-      />
+      {/* 4 Everyday Simple Reasons to Choose Natural Resources */}
+      <SimpleWhyUs />
 
-      {/* The 8-Stage Filtration & Remineralization Science Journey */}
-      <PurityProcess />
+      {/* Modern Bottling Factory Plant in Pakistan Showcase */}
+      <SimpleFactoryShowcase />
 
-      {/* Side-by-Side Mineral Lab & Interactive TDS Simulator */}
-      <WaterLabTester />
+      {/* Easy 1-Minute Online Order Booking Form (Cash on Delivery) */}
+      <SimpleOrderForm />
 
-      {/* Tactile Sensory Pour a Glass Experience */}
-      <PourExperience />
+      {/* Pakistani Brand Footer */}
+      <SimpleFooter />
 
-      {/* Batch QR Code & Aquifer Telemetry Verifier */}
-      <BatchVerifier />
+      {/* Floating Sticky WhatsApp Button (Pulsing Green) */}
+      <FloatingWhatsApp />
 
-      {/* Gastronomy, Specialty Coffee & Lifestyle Pairing */}
-      <GastronomyPairing />
-
-      {/* Live Urban Delivery Dispatch & Fleet Tracker */}
-      <DeliveryDispatchSimulator onOpenOrderModal={() => handleOpenOrder()} />
-
-      {/* Corporate, Hospitality & Bulk Tanker Solutions */}
-      <CorporateSolutions />
-
-      {/* Real-time Plastic Bottles Replaced Sustainability Tracker */}
-      <SustainabilityTracker />
-
-      {/* Verified Customer Stories & Michelin-Star Chef Testimonials */}
-      <ReviewsSection />
-
-      {/* Comprehensive Brand Footer */}
-      <Footer />
-
-      {/* Interactive Slide-out Cart Drawer */}
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        items={cartItems}
-        onUpdateQuantity={handleUpdateQuantity}
-        onRemoveItem={handleRemoveItem}
-        onCheckout={handleCheckoutFromCart}
-      />
-
-      {/* Direct Order & Dispatch Scheduler Modal */}
-      <OrderModal
+      {/* Easy Order Modal */}
+      <SimpleOrderModal
         isOpen={isOrderModalOpen}
         onClose={() => setIsOrderModalOpen(false)}
-        preselectedProduct={orderModalPreselection}
-      />
-
-      {/* Product Deep-Dive Technical Modal */}
-      <ProductDetailModal
-        product={selectedProductDetail}
-        onClose={() => setSelectedProductDetail(null)}
-        onAddToCart={handleAddToCart}
+        selectedProduct={selectedProduct}
       />
     </main>
   );

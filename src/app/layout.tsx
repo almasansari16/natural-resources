@@ -2,9 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Natural Resources™ | Pure Living Hydration & Premium Water Supply",
-  description: "Artisanal mountain spring bottled water and automated smart water supply delivery for homes, corporate offices, and bulk industrial needs. Pure, remineralized, sustainable.",
-  keywords: ["natural resources", "water supply", "bottled water brand", "mineral water", "5 gallon water delivery", "alkaline water", "pure water company"],
+  title: "Natural Resources™ | Pure Drinking Mineral Water & Doorstep Supply (Pakistan)",
+  description: "Refresh Your Moment - Pure Hydration Pure Elegance. Pakistan's trusted mineral water brand. 500ml, 1.5L bottles aur 19-Liter dispenser delivery for homes & offices.",
+  keywords: [
+    "natural resources water",
+    "mineral water pakistan",
+    "19 liter water delivery lahore karachi",
+    "pure drinking water",
+    "water supply company",
+  ],
   icons: {
     icon: "/favicon.ico",
   },
@@ -16,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className="min-h-screen bg-[#020b14] text-slate-100 antialiased selection:bg-cyan-500 selection:text-white font-sans">
+    <html lang="en" className="scroll-smooth">
+      <body className="min-h-screen bg-slate-50 text-slate-800 antialiased font-sans">
         {children}
       </body>
     </html>
