@@ -5,7 +5,7 @@ import { Droplet, Phone, MessageCircle, MapPin, ShieldCheck, Heart } from "lucid
 
 export function SimpleFooter() {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20Natural%20Resources%20Water%20chahiye.";
+    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20inquire%20about%20Natural%20Resources%20Water.";
 
   return (
     <footer className="bg-slate-900 text-slate-300 text-xs pt-16 pb-12 border-t border-slate-800">
@@ -28,7 +28,7 @@ export function SimpleFooter() {
             </div>
 
             <p className="text-slate-400 text-xs leading-relaxed">
-              Pakistan ka pasandeeda pure drinking mineral water brand. 500ml aur 1.5L bottles ke sath sath 19-Liter dispenser cans ki ghar aur office tak rozana doorstep supply.
+              Pakistan's premium pure mineral water brand. Supplying 500ml and 1.5L crystal bottles alongside convenient 19-Liter doorstep refills to households and corporate offices nationwide.
             </p>
 
             <div className="pt-1 flex items-center gap-2 text-emerald-400 font-semibold text-[11px]">
@@ -63,7 +63,7 @@ export function SimpleFooter() {
 
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-[#0284c7]" />
-                <span>Modern Bottling Plant & Fleet Hubs</span>
+                <span>Modern Bottling Plant & Regional Hubs</span>
               </div>
             </div>
           </div>
@@ -74,24 +74,24 @@ export function SimpleFooter() {
               Bottle Sizes
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li>• 500ml Handy Bottle (Pocket Size)</li>
-              <li>• 1.5 Liter Family Bottle (Dinner Table)</li>
-              <li>• 19-Liter / 5-Gallon Dispenser Can</li>
-              <li>• Electric Hot & Cold Water Dispensers</li>
-              <li>• Events, Marriage Halls & Office Bulk Supply</li>
+              <li>• 500ml Personal Bottle (Pack of 12)</li>
+              <li>• 1.5 Liter Family Bottle (Pack of 6)</li>
+              <li>• 19-Liter / 5-Gallon Dispenser Bottle</li>
+              <li>• 19L Solid Oak Stand & Fast Push Tap Kit</li>
+              <li>• Electric 3-Tap Hot & Cold Dispenser Units</li>
             </ul>
           </div>
 
           {/* Cities Covered in Pakistan */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
-              Delivery Shehar (Pakistan)
+              Coverage Cities (Pakistan)
             </h4>
             <p className="text-slate-400 leading-relaxed">
-              Lahore (DHA, Gulberg, Johar Town, Bahria), Karachi (Clifton, DHA, Gulshan), Islamabad, Rawalpindi, Faisalabad, Multan, Sialkot, Peshawar.
+              Lahore (DHA, Gulberg, Johar Town, Bahria), Karachi (Clifton, DHA, Gulshan), Islamabad, Rawalpindi, Faisalabad, Multan, Sialkot, and Peshawar.
             </p>
             <div className="mt-3 p-3 rounded-xl bg-slate-800 text-[11px] text-slate-300">
-              ⚡ <strong>2-Hour Express Delivery:</strong> Urgent zaroorat par rider foran rawana hota hai.
+              ⚡ <strong>Express Delivery:</strong> Orders dispatched within 2 to 4 hours across major city sectors.
             </div>
           </div>
         </div>
@@ -109,4 +109,3 @@ export function SimpleFooter() {
     </footer>
   );
 }
-

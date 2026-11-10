@@ -9,13 +9,13 @@ export function SimpleFactoryShowcase() {
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-14">
         <span className="inline-block px-3 py-1 rounded-full brand-badge text-xs font-bold uppercase tracking-wider mb-2">
-          State of the Art Machinery
+          State of the Art Bottling Plant
         </span>
         <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Hamari Modern Bottling Plant
+          Our Modern Bottling Facility
         </h2>
         <p className="text-slate-600 text-sm sm:text-base mt-2">
-          Natural Resources water insan ke haath lagaye baghair mukammal hygienic stainless steel automated line par pack hota hai.
+          Natural Resources water is purified and bottled on fully automated, touchless stainless steel conveyor lines under strict pharmaceutical-grade standards.
         </p>
       </div>
 
@@ -30,36 +30,36 @@ export function SimpleFactoryShowcase() {
             />
             <div className="absolute top-4 left-4 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-xl text-white text-xs font-bold flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              <span>Automated High-Speed Packing Line</span>
+              <span>Automated High-Speed Bottling Line</span>
             </div>
           </div>
 
           {/* Plant Features */}
           <div className="lg:col-span-5 space-y-5">
             <h3 className="text-2xl font-black text-slate-900 leading-snug">
-              Har Ghoont Mein Khalis Sehat Aur Meetha Zaaiqa
+              Pure Health & Naturally Crisp Taste in Every Sip
             </h3>
             <p className="text-slate-600 text-sm leading-relaxed">
-              Zameen ki gehrai se nikala gaya pani pehle multi-stage sand aur carbon filters se guzarta hai, phir zaroori minerals (Calcium aur Magnesium) ko mutawazan kiya jata hai taake har bottle meethi aur sehat bakhsh ho.
+              Drawn from deep natural aquifers, water passes through multi-stage silica, activated carbon, and sub-micron filtration before being balanced with essential minerals like Calcium and Magnesium for a refreshing, sweet taste.
             </p>
 
             <div className="space-y-3 pt-2">
               {[
                 {
                   title: "100% Contactless Filling",
-                  desc: "Automated robotic nozzle se filling aur capping hoti hai.",
+                  desc: "Automated robotic nozzles perform filling and capping in a sterile, positive-pressure cleanroom.",
                 },
                 {
-                  title: "UV & Ozone Disinfection",
-                  desc: "Bina kisi badboo ya chemical ke 100% jaraseem se paak.",
+                  title: "UV-C & Dual Ozone Disinfection",
+                  desc: "Guarantees 100% microbiological safety with zero chemical odors or chlorine residue.",
                 },
                 {
-                  title: "PSQCA & Food Authority Approved",
-                  desc: "Sarkari standards ke mutabiq har batch ka daily lab test.",
+                  title: "PSQCA & Food Authority Certified",
+                  desc: "Every single production batch undergoes certified daily physical and chemical laboratory testing.",
                 },
                 {
-                  title: "Laser Batch & Expiry Printing",
-                  desc: "Har bottle ki base par laser se batch aur tareekh darj hoti hai.",
+                  title: "Laser Batch & Expiration Traceability",
+                  desc: "Every bottle neck and base features high-precision laser-etched manufacturing batch data.",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
@@ -77,4 +77,3 @@ export function SimpleFactoryShowcase() {
     </section>
   );
 }
-

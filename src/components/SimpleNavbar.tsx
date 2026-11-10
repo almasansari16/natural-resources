@@ -11,22 +11,22 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20Natural%20Resources%20Water%20ka%20order%20karna%20hai.";
+    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-      {/* Top Pakistani Info Bar */}
+      {/* Top Info Bar */}
       <div className="bg-gradient-to-r from-[#1b4332] to-[#2d6a4f] text-white py-1.5 px-4 text-xs font-medium">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-sm">🇵🇰</span>
-            <span>Pakistan's Pure Mineral Water • Ghar aur Office tak Muft Delivery</span>
+            <span>Pakistan's Premium Mineral Water • Free Doorstep Delivery to Homes & Offices</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-5 text-[11px]">
             <span className="flex items-center gap-1 text-emerald-200">
               <Clock className="w-3.5 h-3.5" />
-              <span>Rozana Delivery: 8:00 AM se 8:00 PM</span>
+              <span>Daily Delivery: 8:00 AM – 8:00 PM</span>
             </span>
             <span className="flex items-center gap-1 text-emerald-200">
               <MapPin className="w-3.5 h-3.5" />
@@ -63,13 +63,13 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
             19L Doorstep Refill
           </a>
           <a href="#delivery-cities" className="hover:text-[#0284c7] transition-colors">
-            Delivery Shehr
+            Delivery Cities
           </a>
           <a href="#plant" className="hover:text-[#0284c7] transition-colors">
-            Hamari Plant
+            Our Plant
           </a>
           <a href="#order" className="hover:text-[#0284c7] transition-colors">
-            Order Form (COD)
+            Order Online (COD)
           </a>
         </nav>
 
@@ -133,25 +133,25 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
             19-Liter Dispenser Doorstep Supply
           </a>
           <a
-            href="#why-us"
+            href="#delivery-cities"
             onClick={() => setIsMobileMenuOpen(false)}
             className="py-1 border-b border-slate-100"
           >
-            Natural Resources Kyun Behtar Hai?
+            Delivery Cities & Coverage
           </a>
           <a
             href="#plant"
             onClick={() => setIsMobileMenuOpen(false)}
             className="py-1 border-b border-slate-100"
           >
-            Hamari Modern Factory & Plants
+            Our Modern Bottling Plant
           </a>
           <a
             href="#order"
             onClick={() => setIsMobileMenuOpen(false)}
             className="py-1 border-b border-slate-100"
           >
-            Online Delivery Form
+            Online Delivery Booking (COD)
           </a>
 
           <div className="pt-2 flex flex-col gap-2">
@@ -168,4 +168,3 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
     </header>
   );
 }
-

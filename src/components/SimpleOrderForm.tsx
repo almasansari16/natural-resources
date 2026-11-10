@@ -31,7 +31,7 @@ export function SimpleOrderForm() {
     setSubmitted(true);
   };
 
-  const whatsappDirectMessage = `https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Maine%20Natural%20Resources%20ka%20order%20place%20kiya%20hai:%0AOrder%20ID:%20${orderNumber}%0AName:%20${encodeURIComponent(
+  const whatsappDirectMessage = `https://wa.me/923001234567?text=Hello!%20I%20have%20submitted%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderNumber}%0AName:%20${encodeURIComponent(
     formData.name
   )}%0APackage:%20${encodeURIComponent(formData.packageChoice)}%0ACity:%20${encodeURIComponent(
     formData.city
@@ -45,10 +45,10 @@ export function SimpleOrderForm() {
             Easy Online Booking
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Ghar Baithe Paani Order Karein
+            Order Fresh Water to Your Doorstep
           </h2>
           <p className="text-slate-600 text-sm mt-1">
-            Form bharein ya direct hamare WhatsApp number par apna address share karein.
+            Fill out the quick form below or contact our delivery dispatch team directly on WhatsApp.
           </p>
         </div>
 
@@ -64,10 +64,10 @@ export function SimpleOrderForm() {
                   Order Successfully Placed #{orderNumber}
                 </span>
                 <h3 className="text-2xl font-black text-slate-900 mt-1">
-                  Shukriya, {formData.name}!
+                  Thank You, {formData.name}!
                 </h3>
                 <p className="text-slate-600 text-xs sm:text-sm max-w-md mx-auto mt-2">
-                  Aapka order receive ho chuka hai. Hamara delivery rider jald aapke number <strong>{formData.phone}</strong> par call karke paani delivered karega.
+                  Your delivery booking has been logged. Our regional driver will call you at <strong>{formData.phone}</strong> prior to doorstep arrival.
                 </p>
               </div>
 
@@ -82,7 +82,7 @@ export function SimpleOrderForm() {
                   <span className="font-bold text-slate-900">{formData.city} • {formData.address}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500">Payment Mode:</span>
+                  <span className="text-slate-500">Payment Method:</span>
                   <span className="font-bold text-emerald-700">{formData.payment}</span>
                 </div>
               </div>
@@ -96,14 +96,14 @@ export function SimpleOrderForm() {
                   className="w-full py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>WhatsApp Par Tracking Details Bhejein</span>
+                  <span>Send Order Copy to WhatsApp</span>
                 </a>
 
                 <button
                   onClick={() => setSubmitted(false)}
                   className="w-full py-2.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-bold hover:bg-slate-200"
                 >
-                  Naya Order Karein
+                  Place Another Order
                 </button>
               </div>
             </div>
@@ -112,7 +112,7 @@ export function SimpleOrderForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Aapka Naam (Full Name) *
+                    Full Name *
                   </label>
                   <input
                     required
@@ -126,7 +126,7 @@ export function SimpleOrderForm() {
 
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Mobile / WhatsApp Number *
+                    Phone / WhatsApp Number *
                   </label>
                   <input
                     required
@@ -142,7 +142,7 @@ export function SimpleOrderForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Shehar (City) *
+                    Delivery City *
                   </label>
                   <select
                     value={formData.city}
@@ -159,7 +159,7 @@ export function SimpleOrderForm() {
 
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Product / Package Chunein *
+                    Select Product / Package *
                   </label>
                   <select
                     value={formData.packageChoice}
@@ -184,23 +184,20 @@ export function SimpleOrderForm() {
                     <option value="Natural Resources Electric Dispenser (Rs. 24,500)">
                       Electric 3-Tap Hot & Cold Dispenser — Rs. 24,500
                     </option>
-                    <option value="Electric Dispenser + 2 Free Bottles (Rs. 24,500)">
-                      Electric Dispenser Unit + 2 Free Cans — Rs. 24,500
-                    </option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="text-xs font-bold text-slate-700 block mb-1">
-                  Ghar / Office Ka Address (Street, House/Office #, Area) *
+                  Street Address & Landmark (House/Office #, Street, Sector/Area) *
                 </label>
                 <input
                   required
                   type="text"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  placeholder="e.g. House # 14, Street 7, Sector F-8/2 ya DHA Phase 5"
+                  placeholder="e.g. House # 14, Street 7, Sector F-8/2 or DHA Phase 5"
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                 />
               </div>
@@ -208,7 +205,7 @@ export function SimpleOrderForm() {
               <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>Payment: <strong>Cash on Delivery (COD)</strong> ya <strong>JazzCash / EasyPaisa</strong></span>
+                  <span>Payment: <strong>Cash on Delivery (COD)</strong> or <strong>JazzCash / EasyPaisa</strong> upon arrival</span>
                 </div>
                 <span className="font-bold text-[11px] bg-white px-2 py-0.5 rounded border border-emerald-300">
                   Free Delivery
@@ -220,7 +217,7 @@ export function SimpleOrderForm() {
                 className="w-full py-4 rounded-xl bg-[#1b4332] hover:bg-[#2d6a4f] text-white font-black text-sm uppercase tracking-wider transition-colors shadow-md flex items-center justify-center gap-2"
               >
                 <Truck className="w-4 h-4" />
-                <span>Order Confirm Karein (Cash on Delivery)</span>
+                <span>Confirm Order (Cash on Delivery)</span>
               </button>
             </form>
           )}
@@ -229,4 +226,3 @@ export function SimpleOrderForm() {
     </section>
   );
 }
-

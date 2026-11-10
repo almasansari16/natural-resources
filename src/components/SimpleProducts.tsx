@@ -2,7 +2,7 @@
 
 import React from "react";
 import { PAKISTAN_PRODUCTS, Product } from "@/data/products";
-import { MessageCircle, ShoppingBag, Check, ShieldCheck, Truck, Star } from "lucide-react";
+import { MessageCircle, Check, Truck, ShieldCheck } from "lucide-react";
 
 interface SimpleProductsProps {
   onSelectProductForOrder: (product: Product) => void;
@@ -14,22 +14,22 @@ export function SimpleProducts({ onSelectProductForOrder }: SimpleProductsProps)
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-14">
         <span className="inline-block px-3 py-1 rounded-full sky-badge text-xs font-bold uppercase tracking-wider mb-2">
-          Bottle Sizes & Retail Prices
+          Bottle Sizes & Retail Pricing
         </span>
         <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Hamare Products & Delivery Rates
+          Our Products & Doorstep Delivery Rates
         </h2>
         <p className="text-slate-600 text-sm sm:text-base mt-2">
-          Har zaroorat ke liye alag size. Ghar, safar, restaurant aur office ke liye pure living water.
+          Tailored sizes for every hydration need: home dining, travel, corporate offices, and family living.
         </p>
       </div>
 
       {/* Product Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {PAKISTAN_PRODUCTS.map((prod) => {
-          const whatsappOrderUrl = `https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20${encodeURIComponent(
+          const whatsappOrderUrl = `https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20${encodeURIComponent(
             prod.name
-          )}%20order%20karni%20hai.%20Rate:%20Rs.%20${prod.pricePkr}`;
+          )}.%20Price:%20Rs.%20${prod.pricePkr}`;
 
           return (
             <div
@@ -61,9 +61,6 @@ export function SimpleProducts({ onSelectProductForOrder }: SimpleProductsProps)
                 <h3 className="text-lg font-black text-slate-900 leading-snug">
                   {prod.name}
                 </h3>
-                <div className="text-xs text-slate-500 font-medium">
-                  {prod.urduName}
-                </div>
 
                 <p className="text-xs text-slate-600 leading-relaxed pt-1">
                   {prod.tagline}
@@ -124,4 +121,3 @@ export function SimpleProducts({ onSelectProductForOrder }: SimpleProductsProps)
     </section>
   );
 }
-

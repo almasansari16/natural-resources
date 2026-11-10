@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Natural Resources™ | Pure Drinking Mineral Water & Doorstep Supply (Pakistan)",
-  description: "Refresh Your Moment - Pure Hydration Pure Elegance. Pakistan's trusted mineral water brand. 500ml, 1.5L bottles aur 19-Liter dispenser delivery for homes & offices.",
+  description: "Refresh Your Moment - Pure Hydration Pure Elegance. Pakistan's trusted mineral water brand. 500ml, 1.5L bottles and 19-Liter dispenser delivery for homes & offices.",
   keywords: [
     "natural resources water",
     "mineral water pakistan",

@@ -17,14 +17,14 @@ const CITIES: CityInfo[] = [
     id: "lahore",
     name: "Lahore",
     tagline: "Same-Day Doorstep Express Fleet",
-    deliveryTime: "2 Se 4 Ghantay Ke Andar",
+    deliveryTime: "Within 2 to 4 Hours",
     areas: [
-      "DHA (Phase 1 se Phase 9)",
+      "DHA (Phases 1 through 9)",
       "Gulberg I, II, III",
       "Model Town",
       "Johar Town & Faisal Town",
       "Bahria Town Lahore",
-      "Cantt & Askari 10/11",
+      "Cantt & Askari 10 / 11",
       "Wapda Town & Lake City",
       "Garden Town & Iqbal Town",
     ],
@@ -33,11 +33,11 @@ const CITIES: CityInfo[] = [
   {
     id: "karachi",
     name: "Karachi",
-    tagline: "Mega City Clean Water Network",
+    tagline: "Metropolitan Scheduled Delivery Network",
     deliveryTime: "Same-Day Scheduled Refills",
     areas: [
       "Clifton (Blocks 1-9)",
-      "DHA Karachi (Phase 1-8)",
+      "DHA Karachi (Phases 1-8)",
       "PECHS & SMCHS",
       "Gulshan-e-Iqbal & Gulistan-e-Jauhar",
       "North Nazimabad",
@@ -51,13 +51,13 @@ const CITIES: CityInfo[] = [
     id: "islamabad",
     name: "Islamabad & Rawalpindi",
     tagline: "Twin Cities Pure Living Supply",
-    deliveryTime: "Subah 8 AM Se Raat 8 PM",
+    deliveryTime: "8:00 AM to 8:00 PM Daily",
     areas: [
       "F-Sectors (F-6, F-7, F-8, F-10, F-11)",
       "E-Sectors & Blue Area",
       "G-Sectors (G-9, G-10, G-11)",
-      "Bahria Town (Phase 1-8)",
-      "DHA Islamabad (Phase 1 & 2)",
+      "Bahria Town (Phases 1-8)",
+      "DHA Islamabad (Phases 1 & 2)",
       "Rawalpindi Saddar & Cantt",
       "Satellite Town & Chaklala Scheme",
       "PWD & Media Town",
@@ -67,7 +67,7 @@ const CITIES: CityInfo[] = [
   {
     id: "faisalabad",
     name: "Faisalabad & Multan",
-    tagline: "Industrial & Living Hubs",
+    tagline: "Regional Distribution Hubs",
     deliveryTime: "Next-Morning Guaranteed Doorstep",
     areas: [
       "D-Ground & Kohinoor City",
@@ -84,9 +84,9 @@ const CITIES: CityInfo[] = [
 export function CityCoverageSection() {
   const [activeCity, setActiveCity] = useState<CityInfo>(CITIES[0]);
 
-  const whatsappUrl = `https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20water%20delivery%20in%20${encodeURIComponent(
     activeCity.name
-  )}%20mein%20Natural%20Resources%20water%20delivery%20chahiye.`;
+  )}.`;
 
   return (
     <section id="delivery-cities" className="py-20 bg-slate-900 text-white relative overflow-hidden">
@@ -98,13 +98,13 @@ export function CityCoverageSection() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
             <Truck className="w-3.5 h-3.5" />
-            <span>Pakistan Express Delivery Network</span>
+            <span>Nationwide Express Delivery Network</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-            Hamara Delivery Network & Shehr
+            Delivery Network & Covered Cities
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2">
-            Apna shehr select karein aur dekhein ke aapke ilaqa mein delivery kitni jaldi pohnchegi:
+            Select your city to check delivery timelines and active neighborhood distribution hubs:
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export function CityCoverageSection() {
               {/* Covered Neighborhoods */}
               <div className="pt-3 border-t border-slate-700">
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                  Covered Areas & Societies:
+                  Covered Neighborhoods & Housing Societies:
                 </div>
                 <div className="grid grid-cols-2 gap-2">
                   {activeCity.areas.map((area, idx) => (
@@ -181,7 +181,7 @@ export function CityCoverageSection() {
                   {activeCity.helpline}
                 </div>
                 <p className="text-xs text-slate-300 mt-1">
-                  Har roz subah 8 baje se raat 8 baje tak active riders.
+                  Active delivery fleet running daily from 8:00 AM to 8:00 PM.
                 </p>
               </div>
 
@@ -192,11 +192,11 @@ export function CityCoverageSection() {
                 className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>{activeCity.name} Delivery Order Karein</span>
+                <span>Order Delivery in {activeCity.name}</span>
               </a>
 
               <div className="text-[10px] text-slate-400 text-center">
-                ✓ 2 ya zyada cans par Free Delivery
+                ✓ Free delivery on 2 or more cans / cartons
               </div>
             </div>
           </div>

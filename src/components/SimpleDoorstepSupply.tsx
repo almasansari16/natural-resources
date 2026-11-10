@@ -9,7 +9,7 @@ interface SimpleDoorstepSupplyProps {
 
 export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyProps) {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%2019-Liter%20Dispenser%20Bottles%20ki%20doorstep%20delivery%20chahiye.";
+    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20doorstep%20delivery%20for%2019-Liter%20Dispenser%20Bottles.";
 
   return (
     <section id="dispenser-supply" className="py-20 bg-gradient-to-b from-white via-slate-50 to-white border-y border-slate-200">
@@ -33,7 +33,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
               <div>
                 <div className="text-xs font-bold text-slate-900">Doorstep Refill Rate</div>
                 <div className="text-xl font-black text-[#1b4332]">Rs. 250 <span className="text-xs font-normal text-slate-500">/ can</span></div>
-                <div className="text-[10px] text-emerald-600 font-bold">Khali Can Exchange</div>
+                <div className="text-[10px] text-emerald-600 font-bold">Empty Can Exchange</div>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
           {/* Right Text & Steps */}
           <div className="lg:col-span-7 space-y-6">
             <span className="inline-block px-3 py-1 rounded-full brand-badge text-xs font-bold uppercase tracking-wider">
-              Ghar Aur Office Ke Liye No. 1 Service
+              The #1 Choice for Homes & Offices
             </span>
 
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
@@ -50,7 +50,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
             </h2>
 
             <p className="text-slate-600 text-base leading-relaxed">
-              Bhari hui bottles laane ki pareshani khatam! Hamara delivery staff aapke ghar ya office ke darwazay par bhara hua can pohnchaye ga aur khali can wapis le jayega. Har bottle 100% steam sanitize aur seal hoti hai.
+              No more hauling heavy water bottles from the market! Our punctual delivery team delivers fresh, tamper-sealed bottles right to your kitchen or office dispenser, while taking away your empty cans. Every single bottle is 100% steam-sanitized at high temperatures before filling.
             </p>
 
             {/* 3 Steps */}
@@ -59,16 +59,16 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
                 <div className="w-8 h-8 rounded-lg bg-sky-100 text-[#0284c7] font-black flex items-center justify-center text-sm mb-2">
                   1
                 </div>
-                <h4 className="text-sm font-bold text-slate-900">WhatsApp Par Address Dein</h4>
-                <p className="text-xs text-slate-500 mt-1">Sirf apna naam, address aur bottles ki taadad batayein.</p>
+                <h4 className="text-sm font-bold text-slate-900">Send Delivery Details</h4>
+                <p className="text-xs text-slate-500 mt-1">Message your address, city, and number of cans on WhatsApp or online.</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white border border-slate-200">
                 <div className="w-8 h-8 rounded-lg bg-emerald-100 text-[#1b4332] font-black flex items-center justify-center text-sm mb-2">
                   2
                 </div>
-                <h4 className="text-sm font-bold text-slate-900">Doorstep Delivery</h4>
-                <p className="text-xs text-slate-500 mt-1">Hamara rider direct aapke pantry ya kitchen mein bottle lagaye ga.</p>
+                <h4 className="text-sm font-bold text-slate-900">Doorstep Exchange</h4>
+                <p className="text-xs text-slate-500 mt-1">Our rider collects your empty bottles and sets up the fresh sealed cans.</p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white border border-slate-200">
@@ -76,7 +76,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
                   3
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">Cash on Delivery</h4>
-                <p className="text-xs text-slate-500 mt-1">Paani check karke tasalli se cash ya JazzCash/EasyPaisa karein.</p>
+                <p className="text-xs text-slate-500 mt-1">Inspect your fresh sealed bottles, then pay cash or via JazzCash / EasyPaisa.</p>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
                 className="px-6 py-3.5 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>19L Cans Ka WhatsApp Order Karein</span>
+                <span>Order 19L Cans on WhatsApp</span>
               </a>
 
               <button
@@ -97,7 +97,7 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
                 className="px-6 py-3.5 rounded-2xl bg-[#1b4332] hover:bg-[#2d6a4f] text-white font-bold text-xs transition-colors flex items-center justify-center gap-2"
               >
                 <Truck className="w-4 h-4" />
-                <span>Online Form Bharein</span>
+                <span>Book Delivery Online (COD)</span>
               </button>
             </div>
           </div>
@@ -106,4 +106,3 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
     </section>
   );
 }
-

@@ -18,42 +18,42 @@ const TIERS: PlanTier[] = [
   {
     id: "couple",
     label: "Small Family / Couple",
-    members: "1 - 2 Log",
+    members: "1 - 2 People",
     icon: "🏠",
     cansPerWeek: 1,
     pricePerCan: 250,
-    cartonsRecommend: "1x 19L Can weekly ya 1 Carton (1.5L)",
-    idealFor: "Apartments, small flats & couples",
+    cartonsRecommend: "1x 19L Can weekly or 1 Carton of 1.5L bottles",
+    idealFor: "Apartments, small residences & couples",
   },
   {
     id: "family",
-    label: "Standard Family",
-    members: "3 - 5 Log",
+    label: "Standard Household",
+    members: "3 - 5 People",
     icon: "👨‍👩‍👧‍👦",
     cansPerWeek: 3,
     pricePerCan: 250,
-    cartonsRecommend: "3x 19L Cans weekly + 1 Carton (500ml for kids)",
-    idealFor: "Most Pakistani homes (DHA, Bahria, Gulberg, etc.)",
+    cartonsRecommend: "3x 19L Cans weekly + 1 Carton of 500ml bottles",
+    idealFor: "Family residences (DHA, Bahria Town, Gulberg, etc.)",
   },
   {
     id: "joint-family",
-    label: "Joint Family",
-    members: "6 - 9 Log",
+    label: "Large Household",
+    members: "6 - 9 People",
     icon: "🏡",
     cansPerWeek: 5,
     pricePerCan: 250,
     cartonsRecommend: "5x 19L Cans weekly doorstep refill",
-    idealFor: "Large households with daily cooking & drinking",
+    idealFor: "Large households with daily cooking & hydration needs",
   },
   {
     id: "office",
-    label: "Office / Commercial Team",
-    members: "10 - 25 Log",
+    label: "Corporate Office / Clinic",
+    members: "10 - 25 People",
     icon: "🏢",
     cansPerWeek: 10,
     pricePerCan: 240, // Corporate slight discount
     cartonsRecommend: "10x 19L Cans weekly + Dispenser Unit",
-    idealFor: "Corporate offices, software houses, clinics & gyms",
+    idealFor: "Tech companies, corporate offices, clinics & gyms",
   },
 ];
 
@@ -63,7 +63,7 @@ export function WaterPlanCalculator() {
   const weeklyCost = selectedTier.cansPerWeek * selectedTier.pricePerCan;
   const monthlyCost = weeklyCost * 4;
 
-  const whatsappMessage = `Assalam-o-Alaikum! Mujhe Natural Resources ka "${selectedTier.label}" plan chahiye (${selectedTier.cansPerWeek} Cans weekly - Total monthly Rs. ${monthlyCost.toLocaleString()}). Meri delivery start karwayen.`;
+  const whatsappMessage = `Hello! I would like to set up the "${selectedTier.label}" plan (${selectedTier.cansPerWeek} Cans weekly - Monthly estimate Rs. ${monthlyCost.toLocaleString()}). Please assist me with delivery.`;
   const whatsappUrl = `https://wa.me/923001234567?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -76,10 +76,10 @@ export function WaterPlanCalculator() {
             <span>Interactive Hydration Planner</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Apne Ghar Ya Office Ka <span className="text-[#0284c7]">Monthly Plan</span> Dekhein
+            Calculate Your Home or Office <span className="text-[#0284c7]">Monthly Water Plan</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Aapke ghar mein kitne afrad hain? Sirf select karein aur dekhein kitna paani chahiye aur monthly kharcha kitna aayega.
+            Select your household or team size to see the recommended weekly supply and transparent monthly budget in PKR.
           </p>
         </div>
 
@@ -117,31 +117,31 @@ export function WaterPlanCalculator() {
             {/* Left Breakdown */}
             <div className="md:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full brand-badge text-xs font-bold">
-                <span>Tajweez Karda Plan:</span>
+                <span>Recommended Supply:</span>
                 <span className="font-extrabold">{selectedTier.label}</span>
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
-                {selectedTier.cansPerWeek} x 19-Liter Cans <span className="text-[#0284c7]">Haftawaar</span>
+                {selectedTier.cansPerWeek} x 19-Liter Cans <span className="text-[#0284c7]">Per Week</span>
               </h3>
 
               <p className="text-slate-600 text-sm leading-relaxed">
-                Aapke ghar ya office ke liye <strong>{selectedTier.cansPerWeek * 19} Liters</strong> taaza, meetha aur living mineral water har hafte doorbell par deliver hoga.
+                Supplies <strong>{selectedTier.cansPerWeek * 19} Liters</strong> of 100% pure, naturally sweet mineral water delivered directly to your kitchen or office dispenser every week.
               </p>
 
               {/* Perks */}
               <div className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-700">
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Free doorstep delivery — khali can badal kar naya can lagana</span>
+                  <span>Free doorstep delivery: We take your empty can and install a fresh sealed can</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Subah 8 baje se raat 8 baje tak scheduled regular timings</span>
+                  <span>Reliable delivery schedules between 8:00 AM and 8:00 PM</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Cash on Delivery (COD) ya EasyPaisa/JazzCash se aasan payment</span>
+                  <span>Easy payment via Cash on Delivery (COD), JazzCash, or EasyPaisa</span>
                 </div>
               </div>
             </div>
@@ -150,16 +150,16 @@ export function WaterPlanCalculator() {
             <div className="md:col-span-5 bg-gradient-to-br from-slate-900 to-[#1b4332] text-white p-6 sm:p-7 rounded-2xl space-y-4 shadow-xl">
               <div>
                 <span className="text-[11px] text-emerald-300 font-bold uppercase tracking-wider">
-                  Takhmeena Kharcha (PKR)
+                  Estimated Monthly Investment (PKR)
                 </span>
                 <div className="flex items-baseline gap-2 mt-1">
                   <span className="text-3xl sm:text-4xl font-black text-white">
                     Rs. {monthlyCost.toLocaleString()}
                   </span>
-                  <span className="text-xs text-slate-300 font-medium">/ Mahana</span>
+                  <span className="text-xs text-slate-300 font-medium">/ Month</span>
                 </div>
                 <div className="text-xs text-slate-300 mt-1">
-                  (Rs. {weeklyCost.toLocaleString()} per week • Rs. {selectedTier.pricePerCan}/can)
+                  (Rs. {weeklyCost.toLocaleString()} per week • Rs. {selectedTier.pricePerCan} / can)
                 </div>
               </div>
 
@@ -171,12 +171,12 @@ export function WaterPlanCalculator() {
                   className="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2 animate-whatsapp"
                 >
                   <MessageCircle className="w-4 h-4 fill-white" />
-                  <span>WhatsApp Par Ye Plan Start Karein</span>
+                  <span>Start This Plan on WhatsApp</span>
                 </a>
               </div>
 
               <p className="text-[10px] text-slate-300 text-center leading-tight">
-                Bina kisi advance lock-in ke. Kisi bhi waqt cancel ya pause kar sakte hain.
+                No advance lock-ins. You can pause, reschedule, or cancel anytime.
               </p>
             </div>
           </div>

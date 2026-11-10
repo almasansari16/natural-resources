@@ -17,31 +17,31 @@ const REVIEWS: Review[] = [
   {
     id: "rev-1",
     name: "Dr. Zainab Tariq",
-    role: "House Physician & Mother",
+    role: "Physician & Mother",
     city: "F-7 Islamabad",
     stars: 5,
     comment:
-      "TDS level aur balanced natural minerals bacho aur kidney health ke liye behtareen hain. Sab se achi baat ye hai ke paani mein bilkul qudrati mithaas hai, koi chemical smell nahi aati.",
+      "The balanced 118 TDS living minerals and zero-chemical taste are ideal for our kids' health and digestion. What stands out most is the naturally crisp, sweet finish without any plastic or chlorine smell.",
     verifiedPlan: "19L Wooden Stand Family Plan",
   },
   {
     id: "rev-2",
     name: "Usman Ghani",
-    role: "IT Company Director",
+    role: "Managing Director",
     city: "Gulberg III Lahore",
     stars: 5,
     comment:
-      "Hamare software house mein 25 log hain. Inka 19L automated supply schedule kamaal hai. Khali can unki team khud change kar leti hai aur monthly invoice WhatsApp par mil jati hai.",
+      "We manage a tech office of 25 staff. Their weekly 19-Liter automated delivery has never missed a single slot. The delivery team replaces empty carboys seamlessly, and customer service is always prompt.",
     verifiedPlan: "Corporate 10 Cans / Week",
   },
   {
     id: "rev-3",
     name: "Farhan & Ayesha",
-    role: "Family Home",
+    role: "Residential Home",
     city: "DHA Phase 5 Karachi",
     stars: 5,
     comment:
-      "Nal ka paani bohot kharaab aur salty tha. Natural Resources ka water peene ke baad sab ko bohot farq mehsus hua. Delivery boy hamesha time par aur polite hota hai.",
+      "Our municipal tap water was heavily chlorinated and unpalatable. Switching to Natural Resources was an immediate upgrade for our kitchen and dining table. The bottles arrive sealed and cold every week.",
     verifiedPlan: "3 Cans Weekly Refill",
   },
 ];
@@ -54,13 +54,13 @@ export function CustomerTestimonials() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full brand-badge text-xs font-bold uppercase tracking-wider mb-2">
             <Heart className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
-            <span>Trusted By 12,000+ Pakistani Families</span>
+            <span>Trusted By Over 12,000 Pakistani Families</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            Customer Ka Aetemaad Aur Reviews
+            Customer Feedback & Verified Reviews
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Dekhein hamare regular customers Natural Resources ke meethay zaaiqay aur doorstep service ke baaray mein kya kehte hain:
+            Read what verified households and corporate clients across Pakistan say about our pure taste and reliable delivery service:
           </p>
         </div>
 

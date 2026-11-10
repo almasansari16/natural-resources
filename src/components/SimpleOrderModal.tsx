@@ -44,7 +44,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
     onClose();
   };
 
-  const whatsappConfirmUrl = `https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Maine%20Natural%20Resources%20ka%20order%20place%20kiya%20hai:%0AOrder%20ID:%20${orderCode}%0AName:%20${encodeURIComponent(
+  const whatsappConfirmUrl = `https://wa.me/923001234567?text=Hello!%20I%20have%20booked%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderCode}%0AName:%20${encodeURIComponent(
     formData.name
   )}%0AProduct:%20${encodeURIComponent(formData.productName)}%20(Qty:%20${
     formData.quantity
@@ -73,10 +73,10 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                 Order Confirmed #{orderCode}
               </div>
               <h3 className="text-2xl font-black text-slate-900 mt-1">
-                Aapka Order Note Kar Liya Gaya Hai!
+                Your Order Has Been Booked!
               </h3>
               <p className="text-xs text-slate-600 max-w-sm mx-auto mt-1.5">
-                Hamari delivery van <strong>{formData.city}</strong> mein jald aapke address par pohnchegi. Rider aane se pehle aapko call karega.
+                Our regional delivery van in <strong>{formData.city}</strong> will arrive at your address soon. The driver will call you prior to arrival.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500">Payment:</span>
-                <span className="font-bold text-emerald-700">Cash on Delivery (Delivery ke waqt)</span>
+                <span className="font-bold text-emerald-700">Cash on Delivery (Pay upon arrival)</span>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                 className="w-full py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4 fill-white" />
-                <span>WhatsApp Par Confirmation Bhejein</span>
+                <span>Send Confirmation to WhatsApp</span>
               </a>
 
               <button
@@ -121,11 +121,11 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                 <Truck className="w-4 h-4" />
               </div>
               <h3 className="text-lg font-black text-slate-900">
-                Ghar Par Paani Mangwayen
+                Book Doorstep Water Delivery
               </h3>
             </div>
             <p className="text-xs text-slate-500 mb-5">
-              1-Minute easy booking. Payment delivery ke waqt cash dein.
+              Fast 1-minute order booking. Pay cash or mobile wallet upon arrival.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3.5">
@@ -140,6 +140,9 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                 >
                   <option value="19-Liter / 5-Gallon Dispenser Bottle (Rs. 250)">
                     19-Liter Dispenser Bottle (Rs. 250 Refill)
+                  </option>
+                  <option value="19L Wooden Countertop Stand + Push Tap (Rs. 2,900)">
+                    19L Wooden Countertop Stand + Push Tap (Rs. 2,900)
                   </option>
                   <option value="1.5 Liter Family Pack (Carton of 6) - Rs. 600">
                     1.5 Liter Family Pack (Carton of 6) — Rs. 600
@@ -156,7 +159,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Taadad (Quantity)
+                    Quantity
                   </label>
                   <input
                     type="number"
@@ -170,7 +173,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
 
                 <div>
                   <label className="text-xs font-bold text-slate-700 block mb-1">
-                    Shehar (City) *
+                    City *
                   </label>
                   <select
                     value={formData.city}
@@ -188,14 +191,14 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
 
               <div>
                 <label className="text-xs font-bold text-slate-700 block mb-1">
-                  Aapka Naam *
+                  Full Name *
                 </label>
                 <input
                   required
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. Imran Khan ya Usman"
+                  placeholder="e.g. Muhammad Usman"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                 />
               </div>
@@ -216,7 +219,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
 
               <div>
                 <label className="text-xs font-bold text-slate-700 block mb-1">
-                  Delivery Address (Area, Street, House/Office #) *
+                  Delivery Address (House/Office #, Street, Sector/Area) *
                 </label>
                 <input
                   required
@@ -238,7 +241,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                 className="w-full py-3.5 rounded-xl bg-[#1b4332] hover:bg-[#2d6a4f] text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-sm flex items-center justify-center gap-2"
               >
                 <Truck className="w-4 h-4" />
-                <span>Confirm Order (Delivery Mangwayen)</span>
+                <span>Confirm Order (Book Delivery)</span>
               </button>
             </form>
           </div>
@@ -247,4 +250,3 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
     </div>
   );
 }
-

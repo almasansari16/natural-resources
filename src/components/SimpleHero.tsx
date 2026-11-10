@@ -27,7 +27,7 @@ const BRAND_PHOTOS = [
     src: "/images/dispenser-kitchen-tap.jpg",
     title: "Refresh Your Moment",
     subtitle: "Modern Kitchen Countertop 19L Stand & Fast Push Tap",
-    calloutBadge: "Ghar Ke Liye Most Popular",
+    calloutBadge: "Most Popular for Homes",
   },
   {
     id: "outdoor-bench",
@@ -35,7 +35,7 @@ const BRAND_PHOTOS = [
     icon: "🌲",
     src: "/images/hero-outdoor-bench.jpg",
     title: "Pure Hydration Pure Elegance",
-    subtitle: "Active travel aur outdoor dining ke liye 500ml crystal bottle",
+    subtitle: "Convenient 500ml crystal-clear bottle for active everyday hydration",
     calloutBadge: "Easy Carry Bottle",
   },
   {
@@ -44,7 +44,7 @@ const BRAND_PHOTOS = [
     icon: "🌿",
     src: "/images/girl-drinking.jpg",
     title: "100% Living Pure Mineral Water",
-    subtitle: "Sehatmand energy aur din bhar active rehne ke liye zaroori minerals",
+    subtitle: "Naturally balanced minerals and electrolytes for all-day energy and wellness",
     calloutBadge: "Natural Electrolytes",
   },
   {
@@ -53,7 +53,7 @@ const BRAND_PHOTOS = [
     icon: "❄️",
     src: "/images/bottles-table.jpg",
     title: "The Source of Mineral Water",
-    subtitle: "Ice-cold refreshing bottle packs family dining aur parties ke liye",
+    subtitle: "Crisp, chilled bottle cartons for family dinners, guests, and gatherings",
     calloutBadge: "Carton Packs Available",
   },
   {
@@ -62,15 +62,13 @@ const BRAND_PHOTOS = [
     icon: "🏭",
     src: "/images/bottling-plant.jpg",
     title: "Automated Robotic Bottling",
-    subtitle: "PSQCA certified touchless machine packing & German-standard hygiene",
+    subtitle: "Touchless stainless-steel conveyor line meeting certified PSQCA hygiene",
     calloutBadge: "Zero Human Contact",
   },
 ];
 
 export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
   const [activePhotoIdx, setActivePhotoIdx] = useState(0);
-
-  // Auto rotate photos every 5 seconds unless hovered
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
@@ -83,7 +81,7 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
 
   const activePhoto = BRAND_PHOTOS[activePhotoIdx];
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20Natural%20Resources%20Pure%20Mineral%20Water%20chahiye.";
+    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
 
   return (
     <section className="relative bg-gradient-to-b from-[#e0f2fe]/60 via-[#f8fafc] to-white pt-8 pb-16 overflow-hidden">
@@ -100,7 +98,7 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
               ⚡ Live Express Supply:
             </span>
             <span className="text-slate-600">
-              Lahore, Karachi, Islamabad & Rawalpindi mein door-step delivery jari hai!
+              Doorstep delivery is active today in Lahore, Karachi, Islamabad & Rawalpindi!
             </span>
           </div>
           <div className="flex items-center gap-4 text-slate-500 font-medium">
@@ -137,18 +135,18 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
 
             {/* Simple Everyday Explanation */}
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              <strong>Natural Resources</strong> Pakistan ka wo pure mineral water hai jo aapke ghar aur office tak <strong>meetha, saaf aur certified safe paani</strong> pohanchata hai. Boring ya chemical bad-taste se chhutkara paayein.
+              <strong>Natural Resources</strong> delivers <strong>100% pure, naturally sweet, certified safe mineral water</strong> straight to your doorstep. Say goodbye to chlorinated tap water and enjoy crisp, refreshing hydration every single day.
             </p>
 
             {/* Key Value Badges */}
             <div className="flex flex-wrap items-center gap-2.5 pt-1">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
                 <Droplet className="w-3.5 h-3.5 text-sky-600" />
-                100% Meetha Mineral Zaaiqa
+                100% Naturally Sweet Taste
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800">
                 <Truck className="w-3.5 h-3.5 text-emerald-600" />
-                Khali Can Badlo, Naya Can Lo (Rs. 250)
+                Empty Can Doorstep Exchange: Rs. 250
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
@@ -166,7 +164,7 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
                 className="px-6 py-4 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2.5 animate-whatsapp"
               >
                 <MessageCircle className="w-5 h-5 fill-white" />
-                <span>WhatsApp Par Order Karein</span>
+                <span>Order on WhatsApp</span>
               </a>
 
               {/* Order Form Modal Button */}
@@ -175,7 +173,7 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
                 className="px-6 py-4 rounded-2xl bg-[#1b4332] hover:bg-[#2d6a4f] text-white font-extrabold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
               >
                 <Truck className="w-5 h-5" />
-                <span>Ghar Par Delivery Book Karein</span>
+                <span>Book Home Delivery (COD)</span>
               </button>
 
               {/* Call Helpline */}
@@ -188,13 +186,13 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
               </a>
             </div>
 
-            {/* 3 Simple Pakistani Trust Pillars */}
+            {/* 3 Simple Trust Pillars */}
             <div className="grid grid-cols-3 gap-3 pt-6 border-t border-slate-200 max-w-lg">
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#1b4332] shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs font-bold text-slate-900">PSQCA Approved</div>
-                  <div className="text-[10px] text-slate-500">100% Safe Drinking</div>
+                  <div className="text-[10px] text-slate-500">100% Safe Drinking Water</div>
                 </div>
               </div>
 
@@ -202,21 +200,21 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
                 <Truck className="w-4 h-4 text-[#0284c7] shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs font-bold text-slate-900">Doorstep Can Supply</div>
-                  <div className="text-[10px] text-slate-500">Khali Can Exchange</div>
+                  <div className="text-[10px] text-slate-500">Empty Can Exchange</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-2">
                 <Droplet className="w-4 h-4 text-[#1b4332] shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs font-bold text-slate-900">Fresh & Meetha</div>
+                  <div className="text-xs font-bold text-slate-900">Fresh & Sweet</div>
                   <div className="text-[10px] text-slate-500">Pure Living Source</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Interactive Real Brand Photography Showcase (WOW Factor) */}
+          {/* Right Column: Interactive Real Brand Photography Showcase */}
           <div
             className="lg:col-span-5 space-y-3"
             onMouseEnter={() => setIsPaused(true)}
