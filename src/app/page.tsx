@@ -12,6 +12,7 @@ import { SimpleFactoryShowcase } from "@/components/SimpleFactoryShowcase";
 import { AreaDeliveryChecker } from "@/components/AreaDeliveryChecker";
 import { CityCoverageSection } from "@/components/CityCoverageSection";
 import { CustomerTestimonials } from "@/components/CustomerTestimonials";
+import { FaqSection } from "@/components/FaqSection";
 import { SimpleOrderForm } from "@/components/SimpleOrderForm";
 import { SimpleFooter } from "@/components/SimpleFooter";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -67,10 +68,13 @@ export default function Home() {
       {/* 11. Customer Testimonials & Verified Reviews */}
       <CustomerTestimonials />
 
-      {/* 12. Easy 1-Minute Online Order Booking Form (Cash on Delivery) */}
+      {/* 12. Frequently Asked Questions */}
+      <FaqSection />
+
+      {/* 13. Easy 1-Minute Online Order Booking Form (Cash on Delivery) */}
       <SimpleOrderForm />
 
-      {/* 13. Brand Footer */}
+      {/* 14. Brand Footer */}
       <SimpleFooter />
 
       {/* 14. Responsive Sticky WhatsApp Button & Mobile Action Bar */}
