@@ -178,6 +178,12 @@ export function SimpleOrderForm() {
                     <option value="1x Carton 500ml - 12 Bottles (Rs. 600)">
                       1× Carton 500ml (12 Bottles) — Rs. 600
                     </option>
+                    <option value="19L Wooden Countertop Stand + Push Tap (Rs. 2,900)">
+                      19L Wooden Countertop Stand + Push Tap — Rs. 2,900
+                    </option>
+                    <option value="Natural Resources Electric Dispenser (Rs. 24,500)">
+                      Electric 3-Tap Hot & Cold Dispenser — Rs. 24,500
+                    </option>
                     <option value="Electric Dispenser + 2 Free Bottles (Rs. 24,500)">
                       Electric Dispenser Unit + 2 Free Cans — Rs. 24,500
                     </option>
@@ -223,3 +229,4 @@ export function SimpleOrderForm() {
     </section>
   );
 }
+

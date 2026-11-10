@@ -247,3 +247,4 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
     </div>
   );
 }
+

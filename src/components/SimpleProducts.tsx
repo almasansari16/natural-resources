@@ -25,7 +25,7 @@ export function SimpleProducts({ onSelectProductForOrder }: SimpleProductsProps)
       </div>
 
       {/* Product Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {PAKISTAN_PRODUCTS.map((prod) => {
           const whatsappOrderUrl = `https://wa.me/923001234567?text=Assalam-o-Alaikum!%20Mujhe%20${encodeURIComponent(
             prod.name
@@ -124,3 +124,4 @@ export function SimpleProducts({ onSelectProductForOrder }: SimpleProductsProps)
     </section>
   );
 }
+

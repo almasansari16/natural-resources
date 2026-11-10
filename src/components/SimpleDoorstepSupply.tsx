@@ -17,11 +17,11 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Visual Photo */}
           <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="/images/bottles-table.jpg"
-                alt="19 Liter Water Bottle Natural Resources"
-                className="w-full h-full object-cover"
+                src="/images/dispenser-kitchen-tap.jpg"
+                alt="19 Liter Water Bottle Natural Resources Kitchen Tap Stand"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
 
@@ -106,3 +106,4 @@ export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyP
     </section>
   );
 }
+

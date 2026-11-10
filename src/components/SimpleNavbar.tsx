@@ -55,21 +55,21 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
         </a>
 
         {/* Desktop Links */}
-        <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
           <a href="#products" className="hover:text-[#0284c7] transition-colors">
-            Bottle Sizes & Prices
+            Sizes & Rates
           </a>
           <a href="#dispenser-supply" className="hover:text-[#0284c7] transition-colors">
-            19L Doorstep Supply
+            19L Doorstep Refill
           </a>
-          <a href="#why-us" className="hover:text-[#0284c7] transition-colors">
-            Kyun Chunein?
+          <a href="#delivery-cities" className="hover:text-[#0284c7] transition-colors">
+            Delivery Shehr
           </a>
           <a href="#plant" className="hover:text-[#0284c7] transition-colors">
-            Hamari Factory
+            Hamari Plant
           </a>
           <a href="#order" className="hover:text-[#0284c7] transition-colors">
-            Order Form
+            Order Form (COD)
           </a>
         </nav>
 
@@ -168,3 +168,4 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
     </header>
   );
 }
+
