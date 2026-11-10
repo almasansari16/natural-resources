@@ -8,6 +8,9 @@ import { HydrationCalculator } from "@/components/HydrationCalculator";
 import { ProductCatalog } from "@/components/ProductCatalog";
 import { PurityProcess } from "@/components/PurityProcess";
 import { WaterLabTester } from "@/components/WaterLabTester";
+import { PourExperience } from "@/components/PourExperience";
+import { BatchVerifier } from "@/components/BatchVerifier";
+import { GastronomyPairing } from "@/components/GastronomyPairing";
 import { DeliveryDispatchSimulator } from "@/components/DeliveryDispatchSimulator";
 import { CorporateSolutions } from "@/components/CorporateSolutions";
 import { SustainabilityTracker } from "@/components/SustainabilityTracker";
@@ -119,6 +122,15 @@ export default function Home() {
 
       {/* Side-by-Side Mineral Lab & Interactive TDS Simulator */}
       <WaterLabTester />
+
+      {/* Tactile Sensory Pour a Glass Experience */}
+      <PourExperience />
+
+      {/* Batch QR Code & Aquifer Telemetry Verifier */}
+      <BatchVerifier />
+
+      {/* Gastronomy, Specialty Coffee & Lifestyle Pairing */}
+      <GastronomyPairing />
 
       {/* Live Urban Delivery Dispatch & Fleet Tracker */}
       <DeliveryDispatchSimulator onOpenOrderModal={() => handleOpenOrder()} />
