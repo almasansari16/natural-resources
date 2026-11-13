@@ -37,6 +37,24 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
     const rnd = `NR-${Math.floor(1000 + Math.random() * 9000)}`;
     setOrderCode(rnd);
     setSubmitted(true);
+
+    // Formatted WhatsApp Message
+    const orderText = `*NEW ORDER - NATURAL RESOURCES WATER*%0A%0A*Order ID:* ${rnd}%0A*Customer Name:* ${encodeURIComponent(
+      formData.name
+    )}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Product:* ${encodeURIComponent(
+      formData.productName
+    )}%0A*Quantity:* ${formData.quantity}%0A*City:* ${encodeURIComponent(
+      formData.city
+    )}%0A*Delivery Address:* ${encodeURIComponent(
+      formData.address
+    )}%0A*Payment Mode:* Cash on Delivery (COD)%0A%0APlease confirm my delivery schedule. Thank you!`;
+
+    const waUrl = `https://wa.me/923221204812?text=${orderText}`;
+
+    // Automatically open WhatsApp in new tab/window
+    if (typeof window !== "undefined") {
+      window.open(waUrl, "_blank");
+    }
   };
 
   const handleResetAndClose = () => {

@@ -29,13 +29,29 @@ export function SimpleOrderForm() {
     const rndNum = `NR-PK-${Math.floor(10000 + Math.random() * 90000)}`;
     setOrderNumber(rndNum);
     setSubmitted(true);
+
+    // Formatted WhatsApp Order Message
+    const orderText = `*NEW ORDER - NATURAL RESOURCES WATER*%0A%0A*Order ID:* ${rndNum}%0A*Customer Name:* ${encodeURIComponent(
+      formData.name
+    )}%0A*Phone:* ${encodeURIComponent(formData.phone)}%0A*Product / Package:* ${encodeURIComponent(
+      formData.packageChoice
+    )}%0A*City:* ${encodeURIComponent(formData.city)}%0A*Delivery Address:* ${encodeURIComponent(
+      formData.address
+    )}%0A*Payment Mode:* ${encodeURIComponent(formData.payment)}%0A%0APlease confirm my delivery timing. Thank you!`;
+
+    const waUrl = `https://wa.me/923221204812?text=${orderText}`;
+
+    // Automatically open WhatsApp in new tab/window
+    if (typeof window !== "undefined") {
+      window.open(waUrl, "_blank");
+    }
   };
 
-  const whatsappDirectMessage = `https://wa.me/923221204812?text=Hello!%20I%20have%20submitted%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderNumber}%0AName:%20${encodeURIComponent(
+  const whatsappDirectMessage = `https://wa.me/923221204812?text=*ORDER INQUIRY - NATURAL RESOURCES*%0AOrder ID: ${orderNumber}%0AName: ${encodeURIComponent(
     formData.name
-  )}%0APackage:%20${encodeURIComponent(formData.packageChoice)}%0ACity:%20${encodeURIComponent(
+  )}%0APackage: ${encodeURIComponent(formData.packageChoice)}%0ACity: ${encodeURIComponent(
     formData.city
-  )}%0AAddress:%20${encodeURIComponent(formData.address)}`;
+  )}%0AAddress: ${encodeURIComponent(formData.address)}`;
 
   return (
     <section id="order" className="py-20 bg-slate-100/70 border-t border-slate-200">
