@@ -21,11 +21,20 @@ interface SimpleHeroProps {
 
 const BRAND_PHOTOS = [
   {
+    id: "friends-cheers",
+    tag: "Refresh Your Moment",
+    icon: "✨",
+    src: "/images/friends-cheers-bottles.jpg",
+    title: "Refresh Your Moment",
+    subtitle: "500ml Single Bottle Rs. 30 | PET Pack of 12: Rs. 330",
+    calloutBadge: "Single Rs. 30 • PET Rs. 330",
+  },
+  {
     id: "kitchen-dispenser",
     tag: "Kitchen & Home",
     icon: "🏡",
     src: "/images/dispenser-kitchen-tap.jpg",
-    title: "Refresh Your Moment",
+    title: "19L Dispenser Countertop Stand",
     subtitle: "Modern Kitchen Countertop 19L Stand & Fast Push Tap",
     calloutBadge: "Most Popular for Homes",
   },
@@ -52,9 +61,9 @@ const BRAND_PHOTOS = [
     tag: "Dining & Events",
     icon: "❄️",
     src: "/images/bottles-table.jpg",
-    title: "The Source of Mineral Water",
-    subtitle: "Crisp, chilled bottle cartons for family dinners, guests, and gatherings",
-    calloutBadge: "Carton Packs Available",
+    title: "1.5L Family Dining Bottle",
+    subtitle: "1.5 Liter Single Rs. 60 | PET Pack of 6: Rs. 330",
+    calloutBadge: "Single Rs. 60 • PET Rs. 330",
   },
   {
     id: "bottling-plant",
@@ -81,7 +90,7 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
 
   const activePhoto = BRAND_PHOTOS[activePhotoIdx];
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
+    "https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
 
   return (
     <section className="relative bg-gradient-to-b from-[#e0f2fe]/60 via-[#f8fafc] to-white pt-8 pb-16 overflow-hidden">
@@ -140,17 +149,17 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
 
             {/* Key Value Badges */}
             <div className="flex flex-wrap items-center gap-2.5 pt-1">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800">
+                <Droplet className="w-3.5 h-3.5 text-emerald-600" />
+                500ml: Rs. 30 (PET Rs. 330)
+              </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-xs font-bold text-sky-800">
                 <Droplet className="w-3.5 h-3.5 text-sky-600" />
-                100% Naturally Sweet Taste
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800">
-                <Truck className="w-3.5 h-3.5 text-emerald-600" />
-                Empty Can Doorstep Exchange: Rs. 250
+                1.5 Liter: Rs. 60 (PET Rs. 330)
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-bold text-amber-900">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
-                PSQCA & Halal Certified
+                <Truck className="w-3.5 h-3.5 text-amber-700" />
+                19L Can Refill: Rs. 250
               </span>
             </div>
 
@@ -178,11 +187,11 @@ export function SimpleHero({ onOpenOrderModal }: SimpleHeroProps) {
 
               {/* Call Helpline */}
               <a
-                href="tel:+923001234567"
+                href="tel:+923221204812"
                 className="px-5 py-4 rounded-2xl bg-white border border-slate-200 text-slate-800 hover:text-[#0284c7] hover:border-[#0284c7] font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Phone className="w-4 h-4 text-[#0284c7]" />
-                <span>0300-1234567</span>
+                <span>0322-1204812</span>
               </a>
             </div>
 

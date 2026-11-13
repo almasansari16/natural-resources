@@ -5,7 +5,7 @@ import { Droplet, Phone, MessageCircle, MapPin, ShieldCheck, Heart } from "lucid
 
 export function SimpleFooter() {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20inquire%20about%20Natural%20Resources%20Water.";
+    "https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20inquire%20about%20Natural%20Resources%20Water.";
 
   return (
     <footer className="bg-slate-900 text-slate-300 text-xs pt-16 pb-12 border-t border-slate-800">
@@ -40,15 +40,15 @@ export function SimpleFooter() {
           {/* Quick Contact & WhatsApp */}
           <div className="space-y-3">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-2">
-              Order & Helpline
+              Order & Office Location
             </h4>
             <div className="space-y-2">
               <a
-                href="tel:+923001234567"
+                href="tel:+923221204812"
                 className="flex items-center gap-2 text-slate-300 hover:text-white"
               >
                 <Phone className="w-4 h-4 text-[#0284c7]" />
-                <span>Call Helpline: 0300-1234567</span>
+                <span>Call Helpline: 0322-1204812</span>
               </a>
 
               <a
@@ -58,27 +58,27 @@ export function SimpleFooter() {
                 className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold"
               >
                 <MessageCircle className="w-4 h-4 fill-emerald-400 text-slate-900" />
-                <span>WhatsApp: +92 300 1234567</span>
+                <span>WhatsApp: +92 322 1204812</span>
               </a>
 
-              <div className="flex items-center gap-2 text-slate-400">
-                <MapPin className="w-4 h-4 text-[#0284c7]" />
-                <span>Modern Bottling Plant & Regional Hubs</span>
+              <div className="flex items-start gap-2 text-slate-400 pt-1">
+                <MapPin className="w-4 h-4 text-[#0284c7] shrink-0 mt-0.5" />
+                <span>H C470 Korangi No 5, Karachi Sector 43B</span>
               </div>
             </div>
           </div>
 
-          {/* Bottle Sizes */}
+          {/* Bottle Sizes & Retail Prices */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
-              Bottle Sizes
+              Bottle Sizes & Rates
             </h4>
             <ul className="space-y-2 text-slate-400">
-              <li>• 500ml Personal Bottle (Pack of 12)</li>
-              <li>• 1.5 Liter Family Bottle (Pack of 6)</li>
-              <li>• 19-Liter / 5-Gallon Dispenser Bottle</li>
-              <li>• 19L Solid Oak Stand & Fast Push Tap Kit</li>
-              <li>• Electric 3-Tap Hot & Cold Dispenser Units</li>
+              <li>• <strong>500ml Bottle:</strong> Rs. 30 (PET Pack: Rs. 330)</li>
+              <li>• <strong>1.5L Bottle:</strong> Rs. 60 (PET Pack: Rs. 330)</li>
+              <li>• <strong>19-Liter Can Refill:</strong> Rs. 250 (Doorstep)</li>
+              <li>• <strong>19L Wooden Stand & Tap Kit:</strong> Rs. 2,900</li>
+              <li>• <strong>Hot & Cold Dispenser Unit:</strong> Rs. 24,500</li>
             </ul>
           </div>
 

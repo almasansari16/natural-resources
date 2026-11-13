@@ -28,7 +28,7 @@ const CITIES: CityInfo[] = [
       "Wapda Town & Lake City",
       "Garden Town & Iqbal Town",
     ],
-    helpline: "0300-1234567",
+    helpline: "0322-1204812",
   },
   {
     id: "karachi",
@@ -36,6 +36,7 @@ const CITIES: CityInfo[] = [
     tagline: "Metropolitan Scheduled Delivery Network",
     deliveryTime: "Same-Day Scheduled Refills",
     areas: [
+      "Korangi No 5 (Sector 43B Hub)",
       "Clifton (Blocks 1-9)",
       "DHA Karachi (Phases 1-8)",
       "PECHS & SMCHS",
@@ -43,9 +44,8 @@ const CITIES: CityInfo[] = [
       "North Nazimabad",
       "Malir Cantt",
       "Bahria Town Karachi",
-      "Bahadurabad & Tariq Road",
     ],
-    helpline: "0300-1234567",
+    helpline: "0322-1204812",
   },
   {
     id: "islamabad",
@@ -62,7 +62,7 @@ const CITIES: CityInfo[] = [
       "Satellite Town & Chaklala Scheme",
       "PWD & Media Town",
     ],
-    helpline: "0300-1234567",
+    helpline: "0322-1204812",
   },
   {
     id: "faisalabad",
@@ -77,14 +77,14 @@ const CITIES: CityInfo[] = [
       "Multan Cantt & Gulgasht Colony",
       "Model Town Multan",
     ],
-    helpline: "0300-1234567",
+    helpline: "0322-1204812",
   },
 ];
 
 export function CityCoverageSection() {
-  const [activeCity, setActiveCity] = useState<CityInfo>(CITIES[0]);
+  const [activeCity, setActiveCity] = useState<CityInfo>(CITIES[1]); // Default to Karachi
 
-  const whatsappUrl = `https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20water%20delivery%20in%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20order%20water%20delivery%20in%20${encodeURIComponent(
     activeCity.name
   )}.`;
 

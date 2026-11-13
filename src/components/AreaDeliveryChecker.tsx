@@ -4,15 +4,15 @@ import React, { useState } from "react";
 import { Search, MapPin, CheckCircle2, Clock, Truck, MessageCircle } from "lucide-react";
 
 const POPULAR_AREAS = [
+  { name: "Korangi No 5 / Sector 43B", city: "Karachi", speed: "1 Hour Express" },
+  { name: "DHA Karachi", city: "Karachi", speed: "2 Hours" },
+  { name: "Clifton", city: "Karachi", speed: "2.5 Hours" },
   { name: "DHA Lahore", city: "Lahore", speed: "2 Hours" },
   { name: "Gulberg", city: "Lahore", speed: "2 Hours" },
   { name: "Bahria Town", city: "Lahore / RWP / KHI", speed: "3 Hours" },
-  { name: "Clifton", city: "Karachi", speed: "2.5 Hours" },
-  { name: "DHA Karachi", city: "Karachi", speed: "2 Hours" },
   { name: "F-7 & F-10", city: "Islamabad", speed: "2 Hours" },
   { name: "Johar Town", city: "Lahore", speed: "2.5 Hours" },
   { name: "Model Town", city: "Lahore", speed: "2 Hours" },
-  { name: "Saddar", city: "Rawalpindi", speed: "3 Hours" },
 ];
 
 export function AreaDeliveryChecker() {
@@ -29,7 +29,7 @@ export function AreaDeliveryChecker() {
     setSelectedArea(null);
   };
 
-  const whatsappUrl = `https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20confirm%20delivery%20for%20"${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20confirm%20delivery%20for%20"${encodeURIComponent(
     searchTerm || "my area"
   )}".`;
 

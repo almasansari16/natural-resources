@@ -44,7 +44,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
     onClose();
   };
 
-  const whatsappConfirmUrl = `https://wa.me/923001234567?text=Hello!%20I%20have%20booked%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderCode}%0AName:%20${encodeURIComponent(
+  const whatsappConfirmUrl = `https://wa.me/923221204812?text=Hello!%20I%20have%20booked%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderCode}%0AName:%20${encodeURIComponent(
     formData.name
   )}%0AProduct:%20${encodeURIComponent(formData.productName)}%20(Qty:%20${
     formData.quantity
@@ -138,17 +138,23 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                   onChange={(e) => setFormData({ ...formData, productName: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none bg-white"
                 >
+                  <option value="500ml PET Pack - 12 Bottles (Rs. 330)">
+                    500ml PET Pack (12 Bottles) — Rs. 330
+                  </option>
+                  <option value="500ml Single Bottle (Rs. 30)">
+                    500ml Single Bottle — Rs. 30
+                  </option>
+                  <option value="1.5 Liter PET Pack - 6 Bottles (Rs. 330)">
+                    1.5 Liter PET Pack (6 Bottles) — Rs. 330
+                  </option>
+                  <option value="1.5 Liter Single Bottle (Rs. 60)">
+                    1.5 Liter Single Bottle — Rs. 60
+                  </option>
                   <option value="19-Liter / 5-Gallon Dispenser Bottle (Rs. 250)">
                     19-Liter Dispenser Bottle (Rs. 250 Refill)
                   </option>
                   <option value="19L Wooden Countertop Stand + Push Tap (Rs. 2,900)">
                     19L Wooden Countertop Stand + Push Tap (Rs. 2,900)
-                  </option>
-                  <option value="1.5 Liter Family Pack (Carton of 6) - Rs. 600">
-                    1.5 Liter Family Pack (Carton of 6) — Rs. 600
-                  </option>
-                  <option value="500ml Handy Pack (Carton of 12) - Rs. 600">
-                    500ml Handy Pack (Carton of 12) — Rs. 600
                   </option>
                   <option value="Electric Hot & Cold Dispenser (Rs. 24,500)">
                     Electric Water Dispenser Unit (+2 Free Cans) — Rs. 24,500
@@ -212,7 +218,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="e.g. 0300-1234567"
+                  placeholder="e.g. 0322-1204812"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                 />
               </div>
@@ -226,7 +232,7 @@ export function SimpleOrderModal({ isOpen, onClose, selectedProduct }: SimpleOrd
                   type="text"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  placeholder="e.g. House # 12, Street 4, DHA Phase 6"
+                  placeholder="e.g. H C470 Korangi No 5, Karachi Sector 43B or DHA Phase 5"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                 />
               </div>

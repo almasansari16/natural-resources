@@ -43,7 +43,7 @@ export function FaqSection() {
   };
 
   const whatsappFaqUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20have%20a%20question%20about%20Natural%20Resources%20Water%20delivery.";
+    "https://wa.me/923221204812?text=Hello!%20I%20have%20a%20question%20about%20Natural%20Resources%20Water%20delivery.";
 
   return (
     <section id="faq" className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,11 +118,11 @@ export function FaqSection() {
             <span>Chat on WhatsApp</span>
           </a>
           <a
-            href="tel:+923001234567"
+            href="tel:+923221204812"
             className="px-4 py-2.5 rounded-xl bg-white border border-slate-200 hover:border-[#0284c7] text-slate-800 text-xs font-bold flex items-center gap-1.5"
           >
             <Phone className="w-3.5 h-3.5 text-[#0284c7]" />
-            <span>0300-1234567</span>
+            <span>0322-1204812</span>
           </a>
         </div>
       </div>

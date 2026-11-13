@@ -9,9 +9,9 @@ export function SimpleOrderForm() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    city: "Lahore",
+    city: "Karachi",
     address: "",
-    packageChoice: "2x 19L Dispenser Cans (Rs. 500)",
+    packageChoice: "500ml PET Pack - 12 Bottles (Rs. 330)",
     payment: "Cash on Delivery (COD)",
   });
 
@@ -31,7 +31,7 @@ export function SimpleOrderForm() {
     setSubmitted(true);
   };
 
-  const whatsappDirectMessage = `https://wa.me/923001234567?text=Hello!%20I%20have%20submitted%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderNumber}%0AName:%20${encodeURIComponent(
+  const whatsappDirectMessage = `https://wa.me/923221204812?text=Hello!%20I%20have%20submitted%20an%20order%20for%20Natural%20Resources:%0AOrder%20ID:%20${orderNumber}%0AName:%20${encodeURIComponent(
     formData.name
   )}%0APackage:%20${encodeURIComponent(formData.packageChoice)}%0ACity:%20${encodeURIComponent(
     formData.city
@@ -133,7 +133,7 @@ export function SimpleOrderForm() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="e.g. 0300-1234567"
+                    placeholder="e.g. 0322-1204812"
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                   />
                 </div>
@@ -166,17 +166,23 @@ export function SimpleOrderForm() {
                     onChange={(e) => setFormData({ ...formData, packageChoice: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none bg-white"
                   >
+                    <option value="500ml PET Pack - 12 Bottles (Rs. 330)">
+                      500ml PET Pack (12 Bottles) — Rs. 330
+                    </option>
+                    <option value="500ml Single Bottle (Rs. 30)">
+                      500ml Single Bottle — Rs. 30
+                    </option>
+                    <option value="1.5 Liter PET Pack - 6 Bottles (Rs. 330)">
+                      1.5 Liter PET Pack (6 Bottles) — Rs. 330
+                    </option>
+                    <option value="1.5 Liter Single Bottle (Rs. 60)">
+                      1.5 Liter Single Bottle — Rs. 60
+                    </option>
+                    <option value="19L Dispenser Can Refill (Rs. 250)">
+                      19-Liter Dispenser Can Refill — Rs. 250
+                    </option>
                     <option value="2x 19L Dispenser Cans (Rs. 500)">
                       2× 19-Liter Dispenser Cans — Rs. 500
-                    </option>
-                    <option value="4x 19L Monthly Family Pack (Rs. 950)">
-                      4× 19-Liter Monthly Family Pack — Rs. 950
-                    </option>
-                    <option value="1x Carton 1.5 Liter - 6 Bottles (Rs. 600)">
-                      1× Carton 1.5 Liter (6 Bottles) — Rs. 600
-                    </option>
-                    <option value="1x Carton 500ml - 12 Bottles (Rs. 600)">
-                      1× Carton 500ml (12 Bottles) — Rs. 600
                     </option>
                     <option value="19L Wooden Countertop Stand + Push Tap (Rs. 2,900)">
                       19L Wooden Countertop Stand + Push Tap — Rs. 2,900
@@ -197,7 +203,7 @@ export function SimpleOrderForm() {
                   type="text"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  placeholder="e.g. House # 14, Street 7, Sector F-8/2 or DHA Phase 5"
+                  placeholder="e.g. H C470 Korangi No 5, Karachi Sector 43B or DHA Phase 5"
                   className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-800 text-xs focus:border-[#0284c7] focus:outline-none"
                 />
               </div>

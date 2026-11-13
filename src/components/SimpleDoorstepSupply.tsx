@@ -9,7 +9,7 @@ interface SimpleDoorstepSupplyProps {
 
 export function SimpleDoorstepSupply({ onOpenOrderModal }: SimpleDoorstepSupplyProps) {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20doorstep%20delivery%20for%2019-Liter%20Dispenser%20Bottles.";
+    "https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20order%20doorstep%20delivery%20for%2019-Liter%20Dispenser%20Bottles.";
 
   return (
     <section id="dispenser-supply" className="py-20 bg-gradient-to-b from-white via-slate-50 to-white border-y border-slate-200">

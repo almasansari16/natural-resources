@@ -11,7 +11,7 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
+    "https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Pure%20Mineral%20Water.";
 
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
@@ -77,11 +77,11 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
         <div className="flex items-center gap-3">
           {/* Call Hotline */}
           <a
-            href="tel:+923001234567"
+            href="tel:+923221204812"
             className="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 text-slate-700 hover:text-[#0284c7] hover:border-[#0284c7] text-xs font-bold transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-[#0284c7]" />
-            <span>0300-1234567</span>
+            <span>0322-1204812</span>
           </a>
 
           {/* WhatsApp Direct Order */}
@@ -156,11 +156,11 @@ export function SimpleNavbar({ onOpenOrderModal }: SimpleNavbarProps) {
 
           <div className="pt-2 flex flex-col gap-2">
             <a
-              href="tel:+923001234567"
+              href="tel:+923221204812"
               className="w-full py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-2"
             >
               <Phone className="w-4 h-4 text-[#0284c7]" />
-              <span>Call Helpline: 0300-1234567</span>
+              <span>Call Helpline: 0322-1204812</span>
             </a>
           </div>
         </div>

@@ -64,7 +64,7 @@ export function WaterPlanCalculator() {
   const monthlyCost = weeklyCost * 4;
 
   const whatsappMessage = `Hello! I would like to set up the "${selectedTier.label}" plan (${selectedTier.cansPerWeek} Cans weekly - Monthly estimate Rs. ${monthlyCost.toLocaleString()}). Please assist me with delivery.`;
-  const whatsappUrl = `https://wa.me/923001234567?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/923221204812?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section className="py-20 bg-gradient-to-b from-white via-sky-50/50 to-white border-b border-slate-200">

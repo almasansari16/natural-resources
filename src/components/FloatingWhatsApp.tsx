@@ -9,7 +9,7 @@ interface FloatingWhatsAppProps {
 
 export function FloatingWhatsApp({ onOpenOrderModal }: FloatingWhatsAppProps) {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Water.";
+    "https://wa.me/923221204812?text=Hello!%20I%20would%20like%20to%20order%20Natural%20Resources%20Water.";
 
   return (
     <>
@@ -33,7 +33,7 @@ export function FloatingWhatsApp({ onOpenOrderModal }: FloatingWhatsAppProps) {
       <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] flex items-center justify-between gap-2">
         {/* Fast Call Button */}
         <a
-          href="tel:+923001234567"
+          href="tel:+923221204812"
           className="flex-1 py-2.5 px-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] font-black flex items-center justify-center gap-1.5 transition-colors"
         >
           <Phone className="w-4 h-4 text-[#0284c7]" />
